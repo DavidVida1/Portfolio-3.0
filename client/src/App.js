@@ -1,7 +1,8 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
-import Header from "./section/Header";
-import Home from "./section/Home";
+import Header from "./sections/header/Header";
+import Home from "./sections/home/Home";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Background from "./Background";
 

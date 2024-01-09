@@ -46,13 +46,13 @@ const Header = () => {
 const HeaderContainer = styled.section`
   position: absolute;
   margin-top: 20px;
-  z-index: 2;
+  z-index: 1;
 
   & nav {
+    padding: 10px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    z-index: 2;
 
     & .logo {
       position: relative;
@@ -64,15 +64,11 @@ const HeaderContainer = styled.section`
     }
     & ul {
       display: flex;
-      text-align: right;
-
       position: fixed;
       z-index: 2;
       right: 30px;
 
       & li {
-        display: inline-block;
-        list-style: none;
         margin: 0px 40px;
 
         & .navLink {
