@@ -3,12 +3,14 @@ import GlobalStyles from "./GlobalStyles";
 import Header from "./section/Header";
 import Home from "./section/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Background from "./Background";
 
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
       <Header />
+      <Background />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
