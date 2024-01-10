@@ -7,6 +7,17 @@ const Home = () => {
   return (
     <HomeContainer>
       <Card />
+      <article className="textWrapper">
+        <h2>css-obssesed</h2>
+        <div>
+          <h2>front-end</h2>
+          <p>
+            Crafting visually captivating experience with code and creativity
+          </p>
+        </div>
+
+        <h2>web developer</h2>
+      </article>
     </HomeContainer>
   );
 };
@@ -14,7 +25,6 @@ const Home = () => {
 export default Home;
 
 const HomeContainer = styled.section`
-  position: relative;
   position: absolute;
   top: 50%;
   left: 50%;

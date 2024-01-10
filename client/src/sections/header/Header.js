@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
+import { FaGithub } from "react-icons/fa";
 import styled from "styled-components";
 
 const Header = () => {
@@ -30,13 +30,11 @@ const Header = () => {
       <aside className="media">
         <ul>
           <li>
-            <FaFacebookF />
+            <FaLinkedin />
           </li>
+
           <li>
-            <FaInstagram />
-          </li>
-          <li>
-            <FaTwitter />
+            <FaGithub />
           </li>
         </ul>
       </aside>
@@ -45,6 +43,7 @@ const Header = () => {
 };
 const HeaderContainer = styled.section`
   position: absolute;
+  font-family: "Roboto", sans-serif;
   margin-top: 20px;
   z-index: 1;
 
@@ -75,7 +74,7 @@ const HeaderContainer = styled.section`
           text-decoration: none;
           position: relative;
           text-transform: uppercase;
-          font-size: 1.4rem;
+          font-size: 1.7rem;
           color: var(--color-white);
 
           &::after {
@@ -86,7 +85,7 @@ const HeaderContainer = styled.section`
             bottom: -5px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #ff3131;
+            background-color: var(--color-white);
             transition: width 0.4s;
           }
           &:hover::after {
@@ -107,7 +106,7 @@ const HeaderContainer = styled.section`
       padding: 10px 10px;
 
       & li {
-        font-size: 2rem;
+        font-size: 2.7rem;
         margin: 24px 0;
         transition: 0.3s;
 

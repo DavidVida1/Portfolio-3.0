@@ -4,10 +4,10 @@ import styled from "styled-components";
 
 const Card = () => {
   const options = {
-    scale: 1,
+    scale: 1.1,
     speed: 1000,
     glare: true,
-    "max-glare": 1,
+    "max-glare": 0.5,
     max: 30,
     "glare-prerender": false,
   };
@@ -26,7 +26,47 @@ const Card = () => {
 export default Card;
 
 const CardContainer = styled.section`
-  border-radius: 10px;
+  -webkit-animation: roll-in-blurred-top 1.2s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: roll-in-blurred-top 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+
+  @-webkit-keyframes roll-in-blurred-top {
+    0% {
+      -webkit-transform: translateY(-800px) translateX(1000px) rotateZ(0)
+        rotate(720deg);
+      transform: translateY(-800px) translateX(1000px) rotateZ(0) rotate(360deg);
+      -webkit-filter: blur(50px);
+      filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) translateX(0) rotateZ(-40deg)
+        rotate(0deg);
+      transform: translateY(0) translateX(0) rotateZ(-40deg) rotate(0deg);
+      -webkit-filter: blur(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-blurred-top {
+    0% {
+      -webkit-transform: translateY(-800px) translateX(1000px) rotateZ(0)
+        rotate(720deg);
+      transform: translateY(-800px) translateX(1000px) rotateZ(0) rotate(360deg);
+      -webkit-filter: blur(50px);
+      filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) translateX(0) rotateZ(-40deg)
+        rotate(0deg);
+      transform: translateY(0) translateX(0) rotateZ(-40deg) rotate(0deg);
+      -webkit-filter: blur(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+
   .card {
     position: relative;
     width: 400px;

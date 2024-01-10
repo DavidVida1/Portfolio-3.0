@@ -153,6 +153,7 @@ input {
     }
     body {
         line-height: 1;
+        font-family: 'Times New Roman', Times, serif;
     }
     ol, ul {
         list-style: none;
