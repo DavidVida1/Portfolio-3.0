@@ -113,6 +113,7 @@ video {
   
   --blending: hard-light;
       font-size:62.5%;
+  
     }
 
     
@@ -152,8 +153,10 @@ input {
         display: block;
     }
     body {
+  
         line-height: 1;
-        font-family: 'Times New Roman', Times, serif;
+        overflow-x: hidden; /*Some probleme with the card animation*/
+        font-family: 'Roboto', sans-serif;
     }
     ol, ul {
         list-style: none;

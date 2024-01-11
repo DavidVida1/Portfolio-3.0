@@ -12,20 +12,20 @@ const Card = () => {
     "glare-prerender": false,
   };
   return (
-    <CardContainer>
+    <CardWrapper>
       <Tilt className="card" options={options}>
         <article>
           <p>David Vidal</p>
           <p>Front-end Web Developer</p>
         </article>
       </Tilt>
-    </CardContainer>
+    </CardWrapper>
   );
 };
 
 export default Card;
 
-const CardContainer = styled.section`
+const CardWrapper = styled.section`
   -webkit-animation: roll-in-blurred-top 1.2s cubic-bezier(0.23, 1, 0.32, 1)
     both;
   animation: roll-in-blurred-top 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
@@ -89,6 +89,7 @@ const CardContainer = styled.section`
       flex-direction: column;
       justify-content: center;
       text-align: center;
+      font-family: "Times New Roman", Times, serif;
       width: 100%;
 
       & p {

@@ -16,12 +16,12 @@ const Header = () => {
         <ul>
           <li>
             <NavLink to="" className="navLink">
-              wtver
+              About
             </NavLink>
           </li>
           <li>
             <NavLink to="" className="navLink">
-              wtver
+              Project
             </NavLink>
           </li>
         </ul>
@@ -44,32 +44,31 @@ const Header = () => {
 const HeaderContainer = styled.section`
   position: absolute;
   font-family: "Roboto", sans-serif;
-  margin-top: 20px;
+  font-weight: 700;
+  margin: 50px;
   z-index: 1;
 
   & nav {
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     & .logo {
-      position: relative;
-      left: 80px;
+      position: fixed;
       font-weight: bold;
       text-transform: uppercase;
       color: var(--color-white);
-      font-size: 1.4rem;
+      font-size: 1.7rem;
     }
     & ul {
       display: flex;
       position: fixed;
+      column-gap: 50px;
       z-index: 2;
-      right: 30px;
+      right: 50px;
+      text-shadow: 0 0 5px white;
 
       & li {
-        margin: 0px 40px;
-
         & .navLink {
           text-decoration: none;
           position: relative;
@@ -97,17 +96,18 @@ const HeaderContainer = styled.section`
   }
   & .media {
     color: var(--color-white);
+
     & ul {
       z-index: 2;
       list-style: none;
       position: fixed;
-      right: 30px;
-      top: 76%;
-      padding: 10px 10px;
+      right: 50px;
+      top: 70%;
 
       & li {
         font-size: 2.7rem;
-        margin: 24px 0;
+        margin: 50px 0;
+
         transition: 0.3s;
 
         &:hover {

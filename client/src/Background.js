@@ -81,9 +81,8 @@ const Background = () => {
 export default Background;
 
 const BackgroundContainer = styled.section`
-  position: absolute;
-  z-index: 0;
-
+  position: -webkit-sticky;
+  position: fixed;
   & .gradient-bg {
     width: 100vw;
     height: 100vh;
