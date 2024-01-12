@@ -97,10 +97,9 @@ video {
 
 :root {
   --color-white: rgba(255,255,255,1);
+  --color-offWhite: rgba(217,217,217);
   --color-black: rgba(0,0,0,1);
 
-  --color-bg1: rgb(108, 0, 162);
-  --color-bg2: rgb(0, 17, 82);
 
   --color1: 18, 113, 255;
   --color2: 221, 74, 255;

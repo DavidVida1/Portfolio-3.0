@@ -41,7 +41,7 @@ const Header = () => {
     </HeaderContainer>
   );
 };
-const HeaderContainer = styled.section`
+const HeaderContainer = styled.header`
   position: absolute;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -62,18 +62,21 @@ const HeaderContainer = styled.section`
     }
     & ul {
       display: flex;
+      flex-direction: column;
       position: fixed;
-      column-gap: 50px;
+      row-gap: 50px;
       z-index: 2;
       right: 50px;
+      top: 50px;
       text-shadow: 0 0 5px white;
+      text-align: right;
 
       & li {
         & .navLink {
           text-decoration: none;
           position: relative;
           text-transform: uppercase;
-          font-size: 1.7rem;
+          font-size: 2rem;
           color: var(--color-white);
 
           &::after {
@@ -98,18 +101,25 @@ const HeaderContainer = styled.section`
     color: var(--color-white);
 
     & ul {
-      z-index: 2;
-      list-style: none;
       position: fixed;
+      display: flex;
+      flex-direction: column;
+      row-gap: 50px;
       right: 50px;
-      top: 70%;
+      top: 75%;
 
       & li {
-        font-size: 2.7rem;
-        margin: 50px 0;
-
+        font-size: 3rem;
         transition: 0.3s;
 
+        & svg:first-child {
+          border-radius: 4px;
+          box-shadow: 0px 0px 5px white;
+        }
+        &:nth-child(2) svg {
+          border-radius: 15px;
+          box-shadow: 0px 0px 5px white;
+        }
         &:hover {
           transform: scale(1.8);
         }

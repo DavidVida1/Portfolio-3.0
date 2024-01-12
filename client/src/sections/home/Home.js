@@ -1,7 +1,9 @@
 import React from "react";
-import { useState } from "react";
 import Card from "../../elements/Card.js";
 import About from "../about/About.js";
+import Projects from "../projects/Projects.js";
+import Skills from "../skills/Skills.js";
+import Contact from "../contact/Contact.js";
 import styled from "styled-components";
 
 const Home = () => {
@@ -24,7 +26,6 @@ const Home = () => {
           <h2>web developer</h2>
         </article>
       </HomeContainer>
-      <About />
     </>
   );
 };
@@ -45,11 +46,11 @@ const HomeContainer = styled.section`
   & .textWrapper {
     position: absolute;
     width: 800px;
-    bottom: 100px;
-    left: 80px;
+    bottom: 90px;
+    left: 100px;
     color: var(--color-white);
     text-transform: uppercase;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 700;
     letter-spacing: 3px;
     text-shadow: 0 0 5px white;
