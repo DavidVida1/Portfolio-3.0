@@ -79,7 +79,8 @@ const CardWrapper = styled.section`
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* border: 1px solid rgba(255, 255, 255, 0.18);*/
+    border: 1px solid rgba(203, 155, 81, 0.4);
 
     & .js-tilt-glare {
       border-radius: 10px;
