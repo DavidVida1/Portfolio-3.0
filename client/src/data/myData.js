@@ -17,6 +17,7 @@ const skillsData = [
   { name: "MongoDB", length: 50 },
   { name: "Node.JS", length: 50 },
   { name: "Git", length: 50 },
+  { name: "Framer Motion", length: 50 },
 ];
 
 export { skillsData };

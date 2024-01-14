@@ -24,19 +24,21 @@ const About = () => {
   });
   return (
     <AboutContainer>
-      <h3>About Me</h3>
-      <aside className="aboutWrapper">
-        <img src={portrait} alt="portrait" />
+      <div className="aboutWrappper">
+        <h3>About Me</h3>
+        <aside className="aboutInfo">
+          <img src={portrait} alt="portrait" />
 
-        <p>
-          From microbiologist to web developer, I've shifted my focus from the
-          microscopic world to the digital one, leveraging my analytical mindset
-          and passion for crafting visually captivating user-friendly web
-          experiences. My career shift represents a fusion of scientific rigor
-          and digital creativity in the ever-evolving landscape of web
-          development.
-        </p>
-      </aside>{" "}
+          <p>
+            From microbiologist to web developer, I've shifted my focus from the
+            microscopic world to the digital one, leveraging my analytical
+            mindset and passion for crafting visually captivating user-friendly
+            web experiences. My career shift represents a fusion of scientific
+            rigor and digital creativity in the ever-evolving landscape of web
+            development.
+          </p>
+        </aside>{" "}
+      </div>
     </AboutContainer>
   );
 };
@@ -46,32 +48,33 @@ export default About;
 const AboutContainer = styled.section`
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   color: var(--color-white);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 1) 50%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
 
-  padding-top: 30px;
+  .aboutWrappper {
+    margin: 0 50px;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+    border-radius: 10px;
 
-  & h3 {
-    margin: 0px 0px 30px 100px;
-    padding-bottom: 30px;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 700;
-    text-shadow: 0 0 5px white;
+    h3 {
+      margin: 0 50px;
+    }
   }
 
-  & .aboutWrapper {
+  & .aboutInfo {
     display: flex;
     margin: 0px 100px;
+
     & img {
       border-radius: 10px;
       width: 25%;
+      height: auto;
       -webkit-mask-image: linear-gradient(#000, transparent);
       mask-image: linear-gradient(#000, transparent);
     }

@@ -48,12 +48,15 @@ const FooterContainer = styled.footer`
 
   background: linear-gradient(
     0deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(255, 255, 255, 1) 100%
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 1) 100%
   );
-  color: var(--color-black);
+  color: var(--color-white);
   font-size: 2rem;
 
+  & button {
+    color: var(--color-white);
+  }
   & button svg:hover {
     color: #ffd700;
     transform: translateY(-5px);

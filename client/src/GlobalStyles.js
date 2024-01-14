@@ -172,5 +172,14 @@ input {
         border-collapse: collapse;
         border-spacing: 0;
     }
+
+    & h3 {
+    margin: 0px 100px;
+    padding: 50px 0px;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 0 5px white;
+  }
 `;
 export default GlobalStyles;
