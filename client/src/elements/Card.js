@@ -11,24 +11,22 @@ const Card = () => {
     setIsFlipped(!isFlipped);
   };
 
-  const options = {
-    scale: 1.1,
-    speed: 1000,
+  const glare = {
     glare: true,
     "max-glare": 0.5,
     max: 30,
     "glare-prerender": false,
   };
 
-  const options2 = {
+  const mouvement = {
     scale: 1.1,
     speed: 1000,
   };
   return (
     <CardWrapper>
-      <Tilt options={options2}>
+      <Tilt options={mouvement}>
         <Tilt
-          options={options}
+          options={glare}
           className={`card ${isFlipped ? "back" : "front"}`}
           onClick={handleCardClick}
         >
