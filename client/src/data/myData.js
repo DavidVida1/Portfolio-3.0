@@ -1,3 +1,8 @@
+import carV2 from "../assets/carV2.jpg";
+import allStar from "../assets/allStar.jpg";
+import lounge from "../assets/lounge.jpg";
+import portfolio3 from "../assets/portfolio3.PNG";
+
 const navListData = [
   { _id: 1, href: "/", name: "Home", active: true },
   { _id: 2, href: "/about", name: "About", active: false },
@@ -41,48 +46,52 @@ const navPortfolio = [
 ];
 
 export { navPortfolio };
-/*
+
 const projects = [
   {
     category: "SCHOOL",
+    skills: ["React", "JavaScript", "CSS", "HTML"],
     name: "E-commerce School Project",
     description:
-      "E-Commerce app for wearable tech (Group Project), I was part of the FrontEnd Team,  [React, JS, CSS, HTML] ",
+      "E-Commerce app for wearable tech (Group Project), I was part of the FrontEnd Team",
     projectImg: allStar,
     link: "https://cb-group-project-client.vercel.app/",
   },
-  {
+  /* {
     category: "SCHOOL",
     name: "Car-Project-1",
     description:
       "App to set-up car meetings [React, JS, CSS, HTML, NodeJS, MongoDb] (Being fixed now)",
     projectImg: carV1,
     link: "#",
-  },
+  },*/
   {
     category: "UI/UX",
+    skills: ["React", "JavaScript", "BootStrap", "CSS", "HTML"],
     name: "Lounge Website UI/UX",
     description:
-      "Made a figma page than a landing page following a tutorial in order to learn and pratice Figma & BootStrap [React, BootStrap, HTML, CSS]",
+      "Made a figma page than a landing page following a tutorial in order to learn and pratice Figma & BootStrap ",
     projectImg: lounge,
     link: "https://davidvida1.github.io/Lounge/",
   },
   {
     category: "APP",
+    skills: ["React", "JavaScript", "CSS", "HTML", "NodeJs", "MongoDB"],
     name: "Car Project-2 ",
     description:
-      "Reworked the design of CarApp 1 to set-up car meetings with a new design FrontEnd, Login function incoming [React, JS, CSS, HTML, NodeJS, MongoDb]",
+      "Reworked the design of CarApp 1 to set-up car meetings with a new design FrontEnd, Login function incoming ",
     projectImg: carV2,
     link: "https://davidvida1.github.io/carV2/",
   },
   {
     category: "WEB",
+    skills: ["React", "JavaScript", "CSS", "HTML"],
     name: "This Portfolio",
-    description: "This Portfolio was made by Me!! [React, JS, CSS, HTML]",
-    projectImg: portfolio2,
+    description: "This Portfolio was made by Me!!",
+    projectImg: portfolio3,
     link: "https://davidvida1.github.io/",
   },
 ];
 export { projects };
-*/
+
 /* how export multiple or put everything in a constant or deconstruct when outside */

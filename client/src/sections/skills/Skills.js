@@ -54,7 +54,7 @@ const SkillContainer = styled.section`
     display: grid;
     grid-template-columns: 60% auto;
     gap: 30px;
-    margin: 0 100px;
+    /* margin: 0 100px;*/
     height: auto;
 
     & .skillInfo {
@@ -62,9 +62,6 @@ const SkillContainer = styled.section`
       flex-direction: column;
       row-gap: 50px;
 
-      & h4 {
-        margin-bottom: 30px;
-      }
       & p {
         font-weight: 100;
         width: 90%;

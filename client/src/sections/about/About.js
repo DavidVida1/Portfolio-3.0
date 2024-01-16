@@ -51,8 +51,8 @@ const AboutContainer = styled.section`
   height: 100vh;
   color: var(--color-white);
 
-  .aboutWrappper {
-    margin: 0 50px;
+  & .aboutWrappper {
+    /*margin: 0 50px;*/
     height: 100%;
     background: linear-gradient(
       180deg,
@@ -62,8 +62,8 @@ const AboutContainer = styled.section`
     );
     border-radius: 10px;
 
-    h3 {
-      margin: 0 50px;
+    & h3 {
+      margin: 0px 10px;
     }
   }
 

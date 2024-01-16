@@ -66,7 +66,7 @@ const HeaderContainer = styled.header`
       position: fixed;
       row-gap: 50px;
       z-index: 2;
-      right: 50px;
+      right: 10px;
       top: 50px;
       text-shadow: 0 0 5px white;
       text-align: right;

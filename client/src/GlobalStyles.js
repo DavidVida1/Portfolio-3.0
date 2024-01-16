@@ -174,12 +174,19 @@ input {
     }
 
     & h3 {
-    margin: 0px 100px;
+    /*margin: 0px 100px;*/
+    margin: 0px 10px;
     padding: 50px 0px;
     text-transform: uppercase;
     font-size: 3rem;
     font-weight: 700;
     text-shadow: 0 0 5px white;
   }
+
+  
+  & h4 {
+        margin-bottom: 30px;
+        font-size: 5rem;
+      }
 `;
 export default GlobalStyles;
