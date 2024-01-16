@@ -57,8 +57,8 @@ const AboutContainer = styled.section`
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 1) 50%,
-      rgba(0, 0, 0, 0.9) 100%
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 0.4) 100%
     );
     border-radius: 10px;
 

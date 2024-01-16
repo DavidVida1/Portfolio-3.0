@@ -1,8 +1,16 @@
 /*import CardWrapper from "react-vanilla-tilt";*/
+import React, { useState } from "react";
 import Tilt from "./Tilt.js";
 import styled from "styled-components";
+import "../animation.css";
 
 const Card = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleCardClick = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   const options = {
     scale: 1.1,
     speed: 1000,
@@ -11,13 +19,28 @@ const Card = () => {
     max: 30,
     "glare-prerender": false,
   };
+
+  const options2 = {
+    scale: 1.1,
+    speed: 1000,
+  };
   return (
     <CardWrapper>
-      <Tilt className="card" options={options}>
-        <article>
-          <p>David Vidal</p>
-          <p>Front-end Web Developer</p>
-        </article>
+      <Tilt options={options2}>
+        <Tilt
+          options={options}
+          className={`card ${isFlipped ? "back" : "front"}`}
+          onClick={handleCardClick}
+        >
+          <article className="front">
+            <p>David Vidal</p>
+            <p>Front-end Web Developer</p>
+          </article>
+          <article className="back">
+            <p>''A Good Design is Honest''</p>
+            <p>-Dieter Rams</p>
+          </article>
+        </Tilt>
       </Tilt>
     </CardWrapper>
   );
@@ -29,43 +52,6 @@ const CardWrapper = styled.section`
   -webkit-animation: roll-in-blurred-top 1.2s cubic-bezier(0.23, 1, 0.32, 1)
     both;
   animation: roll-in-blurred-top 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-
-  @-webkit-keyframes roll-in-blurred-top {
-    0% {
-      -webkit-transform: translateY(-800px) translateX(1000px) rotateZ(0)
-        rotate(720deg);
-      transform: translateY(-800px) translateX(1000px) rotateZ(0) rotate(360deg);
-      -webkit-filter: blur(50px);
-      filter: blur(50px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0) translateX(0) rotateZ(-40deg)
-        rotate(0deg);
-      transform: translateY(0) translateX(0) rotateZ(-40deg) rotate(0deg);
-      -webkit-filter: blur(0);
-      filter: blur(0);
-      opacity: 1;
-    }
-  }
-  @keyframes roll-in-blurred-top {
-    0% {
-      -webkit-transform: translateY(-800px) translateX(1000px) rotateZ(0)
-        rotate(720deg);
-      transform: translateY(-800px) translateX(1000px) rotateZ(0) rotate(360deg);
-      -webkit-filter: blur(50px);
-      filter: blur(50px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0) translateX(0) rotateZ(-40deg)
-        rotate(0deg);
-      transform: translateY(0) translateX(0) rotateZ(-40deg) rotate(0deg);
-      -webkit-filter: blur(0);
-      filter: blur(0);
-      opacity: 1;
-    }
-  }
 
   .card {
     position: relative;
@@ -81,6 +67,33 @@ const CardWrapper = styled.section`
     -webkit-backdrop-filter: blur(20px);
     /* border: 1px solid rgba(255, 255, 255, 0.18);*/
     border: 1px solid rgba(203, 155, 81, 0.4);
+
+    &.front {
+      -webkit-animation: flip-in-hor-bottom 1s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: flip-in-hor-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      & .back {
+        display: none;
+      }
+    }
+
+    &.back {
+      -webkit-animation: flip-in-hor-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+      animation: flip-in-hor-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      & .front {
+        display: none;
+      }
+
+      & .back {
+        display: block;
+
+        p {
+          font-size: 1.5rem;
+          padding: 5px 0px;
+        }
+      }
+    }
 
     & .js-tilt-glare {
       border-radius: 10px;

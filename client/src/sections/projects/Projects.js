@@ -11,7 +11,11 @@ const Projects = () => {
         {projects.map((project) => {
           return (
             <a href={project.link}>
-              <img className="a" src={project.projectImg} alt="projectImg" />
+              <img
+                className="a kenburns-top"
+                src={project.projectImg}
+                alt="projectImg"
+              />
 
               <div className="overlay">
                 <aside className="skillsInvolved">
@@ -20,7 +24,7 @@ const Projects = () => {
                   {project.skills ? (
                     <>
                       {project.skills.map((skill, skillIndex) => (
-                        <div key={skillIndex}>{skill}</div>
+                        <p key={skillIndex}>{skill}</p>
                       ))}
                     </>
                   ) : (
@@ -51,8 +55,8 @@ const ProjectContainer = styled.section`
     display: grid;
 
     grid-gap: 100px;
-    grid-template-columns: repeat(4, 250px);
-    grid-template-rows: repeat(3, 250px);
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(3, 200px);
     justify-content: center;
 
     & :first-child {
@@ -76,12 +80,13 @@ const ProjectContainer = styled.section`
 
     & a {
       position: relative;
-      border: 2px solid rgba(0, 0, 0, 0.2);
-      background-color: rgba(0, 0, 0, 0.5);
+      border: 5px solid rgba(0, 0, 0, 0.4);
+      /* background-color: rgba(0, 0, 0, 0.5);
+      padding: 15px;*/
       border-radius: 5px;
-      padding: 15px;
       height: 100%;
       width: 100%;
+      overflow: hidden;
 
       & img {
         position: relative;
@@ -136,8 +141,7 @@ const ProjectContainer = styled.section`
           padding: 10px 0px;
           gap: 5px 10px;
 
-          & p,
-          div {
+          & p {
             font-weight: bold;
             color: #cb9b51;
 
@@ -149,7 +153,8 @@ const ProjectContainer = styled.section`
         }
 
         & p {
-          font-size: 2rem;
+          font-size: 4rem;
+          font-weight: 100;
         }
       }
 
@@ -158,6 +163,13 @@ const ProjectContainer = styled.section`
       &:hover .overlay {
         opacity: 1;
       }
+
+      &:hover {
+        .kenburns-top {
+          -webkit-animation: kenburns-top 20s ease-out both;
+          animation: kenburns-top 20s ease-out both;
+        }
+      }
     }
     @media screen and (max-width: 1200px) {
       display: flex;
@@ -165,15 +177,15 @@ const ProjectContainer = styled.section`
       align-items: center;
       width: 100%;
       & a {
-        height: clamp(300px, 20vw, 370px);
-        width: clamp(300px, 50vw, 70%);
+        height: 50%;
+        width: 50%;
       }
     }
 
     @media screen and (max-width: 800px) {
       & a {
-        height: 100%;
-        width: 90%;
+        height: 80%;
+        width: 80%;
       }
     }
   }

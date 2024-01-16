@@ -42,7 +42,7 @@ const SkillContainer = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
 
   width: 100%;
   height: 100vh;

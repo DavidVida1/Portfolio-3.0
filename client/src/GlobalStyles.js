@@ -113,6 +113,8 @@ video {
   --blending: hard-light;
       font-size:62.5%;
   
+  
+
     }
 
     
@@ -174,9 +176,8 @@ input {
     }
 
     & h3 {
-    /*margin: 0px 100px;*/
-    margin: 0px 10px;
-    padding: 50px 0px;
+
+    padding: 50px 20px;
     text-transform: uppercase;
     font-size: 3rem;
     font-weight: 700;
