@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Skills = () => {
   return (
-    <SkillContainer>
+    <SkillContainer id="skills">
       <h3>Skills</h3>
 
       <div className="skillWrapper">
@@ -77,6 +77,7 @@ const SkillContainer = styled.section`
       & p {
         color: rgba(217, 217, 217, 1);
         font-weight: 700;
+        text-shadow: 0 0 5px white;
       }
     }
   }

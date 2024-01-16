@@ -4,7 +4,7 @@ import { FaArrowUp } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <h3>Contact</h3>
 
       <div className="wrapper">

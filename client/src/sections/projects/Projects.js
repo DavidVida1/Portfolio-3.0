@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Projects = () => {
   return (
-    <ProjectContainer>
+    <ProjectContainer id="projects">
       <h3>Projects</h3>
       <section className="projectWrapper">
         {/*selectedCategory est definie a linterieure ddu useEffect et a donc acces a Navportfolio*/}

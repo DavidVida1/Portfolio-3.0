@@ -29,7 +29,7 @@ const Footer = () => {
       <p>
         © 2024 <span>David Vidal</span>
       </p>
-      <p>Good Design is Honest &nbsp; -Dieter Rams</p>
+      <p>❤️‍🔥</p>
       <button onClick={scrollToTop}>
         BACK TO TOP <FaArrowUp />
       </button>

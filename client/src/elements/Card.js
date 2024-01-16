@@ -84,8 +84,11 @@ const CardWrapper = styled.section`
       }
 
       & .back {
+        position: absolute;
         display: block;
-
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -325%);
         p {
           font-size: 1.5rem;
           padding: 5px 0px;

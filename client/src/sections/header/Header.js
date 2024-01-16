@@ -15,14 +15,24 @@ const Header = () => {
 
         <ul>
           <li>
-            <NavLink to="" className="navLink">
+            <a className="navLink" href="#about">
               About
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink to="" className="navLink">
-              Project
-            </NavLink>
+            <a className="navLink" href="#projects">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a className="navLink" href="#skills">
+              Skills
+            </a>
+          </li>
+          <li>
+            <a className="navLink" href="#contact">
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
@@ -65,8 +75,7 @@ const HeaderContainer = styled.header`
       flex-direction: column;
       position: fixed;
       row-gap: 50px;
-      z-index: 2;
-      right: 10px;
+      right: 0px;
       top: 50px;
       text-shadow: 0 0 5px white;
       text-align: right;

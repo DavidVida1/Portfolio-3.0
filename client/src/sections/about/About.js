@@ -23,7 +23,7 @@ const About = () => {
     }
   });
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <div className="aboutWrappper">
         <h3>About Me</h3>
         <aside className="aboutInfo">
