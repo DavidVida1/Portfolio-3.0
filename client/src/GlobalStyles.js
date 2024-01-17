@@ -158,6 +158,7 @@ input {
         line-height: 1;
         overflow-x: hidden; /*Some probleme with the card animation*/
         font-family: 'Roboto', sans-serif;
+        background: rgba(0,0,0,1)
     }
     ol, ul {
         list-style: none;
@@ -175,8 +176,15 @@ input {
         border-spacing: 0;
     }
 
-    & h3 {
+  & h2 {     
+    display: inline;
+    font-size: clamp(4rem, 4.2vw, 6rem);
+    text-shadow: 0 0 5px white;
+    font-weight: 700;
+    text-shadow: 0 0 5px white;
+  }
 
+  & h3 {
     padding: 50px 20px;
     text-transform: uppercase;
     font-size: 3rem;
@@ -184,10 +192,17 @@ input {
     text-shadow: 0 0 5px white;
   }
 
-  
+
   & h4 {
-        margin-bottom: 30px;
-        font-size: 5rem;
+    margin-bottom: 30px;
+    font-size: clamp(2rem, 4.2vw, 5rem);
       }
+
+  & h5 {        
+    color: rgba(217, 217, 217, 1);
+    font-weight: 700;
+    text-shadow: 0 0 5px white;
+    font-size: clamp(2.7rem, 3.5vw, 5rem);
+        }
 `;
 export default GlobalStyles;

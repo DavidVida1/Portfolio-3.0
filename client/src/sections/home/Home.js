@@ -1,32 +1,27 @@
 import React from "react";
 import Card from "../../elements/Card.js";
-import About from "../about/About.js";
-import Projects from "../projects/Projects.js";
-import Skills from "../skills/Skills.js";
-import Contact from "../contact/Contact.js";
 import styled from "styled-components";
 
 const Home = () => {
   return (
-    <>
-      <HomeContainer>
-        <div className="cardContainer">
-          <Card />
+    <HomeContainer>
+      <div className="cardContainer">
+        <Card />
+      </div>
+
+      <article className="textWrapper">
+        <h2>css-obssesed</h2>
+
+        <div className="text">
+          <h2>front-end</h2>
+          <p>
+            Crafting visually captivating experience with code and creativity
+          </p>
         </div>
 
-        <article className="textWrapper">
-          <h2>css-obssesed</h2>
-          <div className="text">
-            <h2>front-end</h2>
-            <p>
-              Crafting visually captivating experience with code and creativity
-            </p>
-          </div>
-
-          <h2>web developer</h2>
-        </article>
-      </HomeContainer>
-    </>
+        <h2>web developer</h2>
+      </article>
+    </HomeContainer>
   );
 };
 
@@ -45,15 +40,21 @@ const HomeContainer = styled.section`
 
   & .textWrapper {
     position: absolute;
-    width: 800px;
-    bottom: 90px;
-    left: 100px;
+    bottom: 10%;
+    left: 5%;
     color: var(--color-white);
     text-transform: uppercase;
-    font-size: 6rem;
-    font-weight: 700;
     letter-spacing: 3px;
-    text-shadow: 0 0 5px white;
+
+    @media screen and (max-width: 700px) {
+      bottom: 13%;
+    }
+
+    @media screen and (max-width: 450px) {
+      h2 {
+        font-size: 3.6rem;
+      }
+    }
 
     & h2:not(.text h2) {
       transform: translateX(3rem);
@@ -61,11 +62,38 @@ const HomeContainer = styled.section`
 
     & .text {
       display: flex;
+      width: 100%;
       letter-spacing: 5px;
 
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+      }
       & p {
-        font-size: 1.7rem;
-        width: 400px;
+        font-size: clamp(1.3rem, 1.2vw, 1.7rem);
+        width: 32%;
+        text-shadow: 0 0 5px white;
+        font-weight: 700;
+        @media screen and (max-width: 1150px) {
+          width: 33%;
+        }
+        @media screen and (max-width: 1050px) {
+          width: 35%;
+        }
+        @media screen and (max-width: 910px) {
+          width: 38%;
+        }
+        @media screen and (max-width: 820px) {
+          width: 42%;
+        }
+        @media screen and (max-width: 750px) {
+          width: 50%;
+        }
+        @media screen and (max-width: 615px) {
+          font-size: clamp(1rem, 2vw, 1.7rem);
+        }
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
       }
     }
   }

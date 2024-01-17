@@ -39,4 +39,11 @@ export default App;
 const AppContainer = styled.section`
   position: relative;
   margin: 0px 100px;
+
+  @media screen and (max-width: 700px) {
+    margin: 0px 50px;
+  }
+  @media screen and (max-width: 600px) {
+    margin: 10px;
+  }
 `;

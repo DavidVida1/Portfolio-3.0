@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 const Background = () => {
