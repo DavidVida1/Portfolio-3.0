@@ -31,6 +31,7 @@ const Projects = () => {
                     <p>No skills information available for this project.</p>
                   )}
                 </aside>
+
                 <p>{project.description}</p>
               </div>
             </a>
@@ -75,7 +76,7 @@ const ProjectContainer = styled.section`
     }
     & :nth-child(4) {
       grid-column: 1 / 5;
-      grid-row: 5 /6;
+      grid-row: 5/6;
     }
 
     & a {
@@ -131,29 +132,59 @@ const ProjectContainer = styled.section`
         color: var(--color-white);
         background-color: rgba(0, 0, 0, 0.5);
         transition: all 0.8s ease-in-out;
-        font-size: 1.5rem;
+        font-size: clamp(1rem, 4.2vw, 3rem);
         opacity: 0;
 
         & .skillsInvolved {
           display: flex;
           flex-wrap: wrap;
-          font-size: 2rem;
+          font-size: clamp(1rem, 4.2vw, 3rem);
           padding: 10px 0px;
           gap: 5px 10px;
 
           & p {
             font-weight: bold;
-            color: #cb9b51;
-
-            background-color: rgba(0, 0, 0, 0.8);
             padding: 5px 10px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 10px;
+            background: linear-gradient(
+              to right,
+              #462523 0,
+              #cb9b51 22%,
+              #f6e27a 45%,
+              #f6f2c0 50%,
+              #f6e27a 55%,
+              #cb9b51 78%,
+              #462523 100%
+            );
+
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            &:first-child {
+              background: radial-gradient(
+                circle farthest-corner at center,
+                rgba(0, 155, 227, 1) 10%,
+                rgba(0, 129, 199, 1) 20%,
+                rgba(0, 104, 171, 1) 30%,
+                rgba(0, 80, 144, 1) 40%,
+                rgba(0, 58, 118, 1) 50%,
+                rgba(0, 37, 93, 1) 60%,
+                rgba(0, 13, 69, 1) 70%,
+                rgba(0, 4, 46, 1) 80%,
+                rgba(0, 1, 24, 1) 90%,
+                rgba(0, 0, 0, 1) 100%
+              );
+              -webkit-text-fill-color: transparent;
+              -webkit-background-clip: text;
+              background-clip: text;
+            }
           }
         }
 
         & p {
-          font-size: 4rem;
+          font-size: clamp(1rem, 4.2vw, 3rem);
           font-weight: 100;
         }
       }
@@ -175,17 +206,17 @@ const ProjectContainer = styled.section`
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 100%;
+
       & a {
-        height: 50%;
-        width: 50%;
+        height: 75%;
+        width: 75%;
       }
     }
 
     @media screen and (max-width: 800px) {
       & a {
-        height: 80%;
-        width: 80%;
+        height: 100%;
+        width: 100%;
       }
     }
   }

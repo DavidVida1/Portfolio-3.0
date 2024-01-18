@@ -75,7 +75,7 @@ const projects = [
     link: "https://davidvida1.github.io/Lounge/",
   },
   {
-    category: "APP",
+    category: "UI/UX",
     skills: ["React", "JavaScript", "CSS", "HTML", "NodeJs", "MongoDB"],
     name: "Car Project-2 ",
     description:
