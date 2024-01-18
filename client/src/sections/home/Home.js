@@ -88,7 +88,7 @@ const HomeContainer = styled.section`
         @media screen and (max-width: 750px) {
           width: 50%;
         }
-        @media screen and (max-width: 615px) {
+        @media screen and (max-width: 620px) {
           font-size: clamp(1rem, 2vw, 1.7rem);
         }
         @media screen and (max-width: 600px) {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import portrait from "../../assets/Crop-Iphone1Black2.png";
 import styled from "styled-components";
 

@@ -59,13 +59,12 @@ const SkillContainer = styled.section`
     & .skillInfo {
       display: flex;
       flex-direction: column;
-
       row-gap: 50px;
 
       & p {
         font-weight: 100;
         width: 90%;
-        font-size: clamp(2.8rem, 4.2vw, 5rem);
+        font-size: clamp(3rem, 4.2vw, 5rem);
       }
     }
 

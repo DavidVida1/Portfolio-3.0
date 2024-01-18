@@ -1,7 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
-
 import { FaGithub } from "react-icons/fa";
 import styled from "styled-components";
 
@@ -113,6 +111,7 @@ const HeaderContainer = styled.header`
       }
     }
   }
+
   & .media {
     color: var(--color-white);
 
@@ -141,7 +140,7 @@ const HeaderContainer = styled.header`
         }
       }
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
       display: none;
     }
   }

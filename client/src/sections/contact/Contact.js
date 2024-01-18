@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { FaArrowUp } from "react-icons/fa";
+
+import { FaLinkedin } from "react-icons/fa";
+
+import { FaGithub } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -14,6 +17,16 @@ const Contact = () => {
             I am currently not available for freelance work. I am accepting new
             projects starting from February 2022.
           </p>
+
+          <aside className="media">
+            <div>
+              <FaLinkedin />
+            </div>
+
+            <div>
+              <FaGithub />
+            </div>
+          </aside>
         </aside>
 
         <aside className="rightside">
@@ -88,7 +101,15 @@ const ContactContainer = styled.section`
   );
 
   & h3 {
-    margin: 0 110px;
+    padding: 50px 20px;
+    margin: 0px 100px;
+
+    @media screen and (max-width: 700px) {
+      margin: 0px 50px;
+    }
+    @media screen and (max-width: 600px) {
+      margin: 10px;
+    }
   }
   & .wrapper {
     position: relative;
@@ -97,9 +118,32 @@ const ContactContainer = styled.section`
     margin: 0 100px;
 
     & .leftSide {
-      width: 90%;
+      width: 100%;
       & p {
         font-size: 3rem;
+      }
+
+      & .media {
+        display: flex;
+        flex-direction: row;
+        margin: 50px 0px;
+        gap: 0px 50px;
+        font-size: 3rem;
+
+        & div {
+          & svg:first-child {
+            border-radius: 4px;
+            box-shadow: 0px 0px 5px white;
+          }
+          &:nth-child(2) svg {
+            border-radius: 15px;
+            box-shadow: 0px 0px 5px white;
+          }
+        }
+
+        @media screen and (min-width: 700px) {
+          display: none;
+        }
       }
     }
 
@@ -157,12 +201,22 @@ const ContactContainer = styled.section`
             width: 100%;
           }
 
-          @media screen and (max-width: 650px) {
+          @media screen and (max-width: 700px) {
             flex-direction: column;
             gap: 1rem 0px;
           }
         }
       }
+    }
+
+    @media screen and (max-width: 1000px) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 50px;
+    }
+
+    @media screen and (max-width: 700px) {
+      margin: 0px 50px;
     }
   }
 `;

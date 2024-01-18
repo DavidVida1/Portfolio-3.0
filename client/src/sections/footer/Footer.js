@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import styled from "styled-components";
 
@@ -44,7 +43,7 @@ const FooterContainer = styled.footer`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 100px;
+  padding: 0 50px;
 
   background: linear-gradient(
     0deg,
@@ -52,7 +51,7 @@ const FooterContainer = styled.footer`
     rgba(0, 0, 0, 1) 100%
   );
   color: var(--color-white);
-  font-size: 2rem;
+  font-size: clamp(1rem, 4.2vw, 2rem);
 
   & button {
     color: var(--color-white);
@@ -72,5 +71,9 @@ const FooterContainer = styled.footer`
     font-weight: 700;
     background: transparent;
     border: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 10px;
   }
 `;
