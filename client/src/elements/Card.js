@@ -144,7 +144,7 @@ const CardWrapper = styled.section`
 
       & .name {
         font-family: "Times New Roman", Times, serif;
-        font-size: clamp(2rem, 3.5vw, 2.5rem);
+        font-size: clamp(2rem, 3.5vw, 2.2rem);
         text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
       }
       & .job {
@@ -183,7 +183,7 @@ const CardWrapper = styled.section`
         }
 
         .quote {
-          font-size: 1.8rem;
+          font-size: 1.9rem;
           padding: 5px 0px;
           text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 
