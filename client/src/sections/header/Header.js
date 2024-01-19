@@ -1,15 +1,16 @@
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import logo from "../../assets/logo.svg";
 import styled from "styled-components";
 
 const Header = () => {
   return (
     <HeaderContainer>
       <nav>
-        <div className="logo">
-          <span>Logo</span>
-        </div>
+        {/*<div className="logo">
+          <img src={logo} />
+        </div>*/}
 
         <ul>
           <li>
@@ -58,20 +59,26 @@ const HeaderContainer = styled.header`
 
   & nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
-    & .logo {
-      position: fixed;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: var(--color-white);
-      font-size: 1.7rem;
+    @media screen and (max-width: 1690px) {
+      justify-content: space-between;
+    }
 
-      @media screen and (max-width: 700px) {
+    /* & .logo {
+      position: fixed;
+
+      & img {
+        height: 30px;
+        @media screen and (max-width: 1690px) {
+          height: 50px;
+        }
+      }
+      @media screen and (max-width: 1690px) {
         position: relative;
       }
-    }
+    }*/
     & ul {
       display: flex;
       flex-direction: column;

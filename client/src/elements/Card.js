@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Tilt from "./Tilt.js";
 import styled from "styled-components";
 import "../animation.css";
+import logo from "../assets/logo.svg";
+import logoGold from "../assets/logoGold.svg";
 
 const Card = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -31,13 +33,14 @@ const Card = () => {
           onClick={handleCardClick}
         >
           <article className="front">
-            <p>David Vidal</p>
-            <p>Front-end Web Developer</p>
+            <img src={logoGold} />
+            <p className="name">David Vidal</p>
+            <p className="job">Front-end Web Developer</p>
           </article>
 
           <article className="back">
-            <p>''A Good Design is Honest''</p>
-            <p>-Dieter Rams</p>
+            <p className="quote">''A Good Design is Honest''</p>
+            <p className="quote">-Dieter Rams</p>
           </article>
         </Tilt>
       </Tilt>
@@ -67,7 +70,7 @@ const CardWrapper = styled.section`
     border: 1px solid rgba(203, 155, 81, 0.4);
 
     @media screen and (max-width: 600px) {
-      width: 300px;
+      width: 320px;
       height: 200px;
     }
     & article {
@@ -77,6 +80,43 @@ const CardWrapper = styled.section`
       text-align: center;
       font-family: "Times New Roman", Times, serif;
       width: 100%;
+
+      & img {
+        position: absolute;
+        height: 20%;
+        width: 100%;
+        top: 35%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        /*background-image: linear-gradient(
+          to right,
+          #462523 0,
+          #cb9b51 22%,
+          #f6e27a 45%,
+          #f6f2c0 50%,
+          #f6e27a 55%,
+          #cb9b51 78%,
+          #462523 100%
+        );*/
+        -webkit-mask-image: url(${logo}),
+          linear-gradient(to bottom, #000, transparent 70%),
+          linear-gradient(to bottom, transparent 95%, #000),
+          linear-gradient(to top, transparent 55%, #000),
+          linear-gradient(to left, transparent 75%, #000),
+          linear-gradient(to right, transparent 100%, #000);
+
+        mask-image: url(${logo}),
+          linear-gradient(to bottom, #000, transparent 70%),
+          linear-gradient(to bottom, transparent 95%, #000),
+          linear-gradient(to top, transparent 55%, #000),
+          linear-gradient(to left, transparent 75%, #000),
+          linear-gradient(to right, transparent 100%, #000);
+
+        -webkit-mask-size: 100%;
+        mask-size: 100vh 100%;
+      }
 
       & p {
         position: relative;
@@ -101,22 +141,15 @@ const CardWrapper = styled.section`
         @media screen and (max-width: 600px) {
           top: 130px;
         }
-        &:first-child {
-          font-size: 3rem;
-          text-transform: uppercase;
+      }
 
-          @media screen and (max-width: 600px) {
-            font-size: 2.3rem;
-          }
-        }
-
-        &:nth-child(2) {
-          font-size: 1.5rem;
-
-          @media screen and (max-width: 600px) {
-            font-size: 1.2rem;
-          }
-        }
+      & .name {
+        font-family: "Times New Roman", Times, serif;
+        font-size: clamp(2rem, 3.5vw, 2.5rem);
+      }
+      & .job {
+        font-family: "Times New Roman", Times, serif;
+        font-size: clamp(1.5rem, 3vw, 2rem);
       }
     }
 
@@ -140,19 +173,20 @@ const CardWrapper = styled.section`
       & .back {
         position: absolute;
         display: block;
-        top: 50%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -325%);
 
         @media screen and (max-width: 600px) {
           transform: translate(-50%, -320%);
         }
-        p {
-          font-size: 1.5rem;
+
+        .quote {
+          font-size: 1.8rem;
           padding: 5px 0px;
 
           @media screen and (max-width: 600px) {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
           }
         }
       }
