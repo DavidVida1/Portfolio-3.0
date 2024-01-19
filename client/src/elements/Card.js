@@ -64,10 +64,8 @@ const CardWrapper = styled.section`
     height: 250px;
     background: rgba(21, 21, 21, 1);
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border: 1px solid rgba(203, 155, 81, 0.4);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border: 1px solid rgba(203, 155, 81, 0.5);
 
     @media screen and (max-width: 600px) {
       width: 320px;
@@ -134,6 +132,7 @@ const CardWrapper = styled.section`
           #cb9b51 78%,
           #462523 100%
         );
+
         -webkit-background-clip: text;
         background-clip: text;
         text-shadow: 0, 0, 0, rgba(255, 255, 255, 0.18);
@@ -146,10 +145,12 @@ const CardWrapper = styled.section`
       & .name {
         font-family: "Times New Roman", Times, serif;
         font-size: clamp(2rem, 3.5vw, 2.5rem);
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
       }
       & .job {
         font-family: "Times New Roman", Times, serif;
         font-size: clamp(1.5rem, 3vw, 2rem);
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
       }
     }
 
@@ -184,6 +185,7 @@ const CardWrapper = styled.section`
         .quote {
           font-size: 1.8rem;
           padding: 5px 0px;
+          text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 
           @media screen and (max-width: 600px) {
             font-size: 1.3rem;
