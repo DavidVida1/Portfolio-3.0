@@ -50,14 +50,22 @@ const AboutContainer = styled.section`
   width: 100%;
   height: 100vh;
   color: var(--color-white);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px -15px 15px,
+    rgba(0, 0, 0, 0.12) 0px -15px 15px, rgba(0, 0, 0, 0.12) 0px -15px 15px,
+    rgba(0, 0, 0, 0.17) 0px -15px 15px, rgba(0, 0, 0, 0.09) 0px -15px 15px;
 
   & .aboutWrappper {
     height: 100%;
     background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.8) 50%,
-      rgba(0, 0, 0, 0.4) 100%
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 25%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0.6) 80%,
+      rgba(0, 0, 0, 0.4) 90%,
+      rgba(0, 0, 0, 0.2) 95%,
+      rgba(0, 0, 0, 0) 100%
     );
     border-radius: 10px;
 

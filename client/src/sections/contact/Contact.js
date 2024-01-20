@@ -92,12 +92,23 @@ const ContactContainer = styled.section`
   padding-top: 30px;
   color: var(--color-white);
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 1) 50%,
     rgba(0, 0, 0, 0.9) 93%,
     rgba(0, 0, 0, 0) 100%
+  );*/
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 2%,
+    rgba(0, 0, 0, 0.2) 5%,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(0, 0, 0, 0.79) 12%,
+    rgba(0, 0, 0, 0.92) 15%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 100%
   );
 
   & h3 {

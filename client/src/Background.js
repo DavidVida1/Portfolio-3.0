@@ -81,11 +81,15 @@ const Background = () => {
 export default Background;
 
 const BackgroundContainer = styled.section`
-  position: -webkit-sticky;
+  position: -webkit-fixed;
   position: fixed;
+  width: 100%;
+  height: 100%;
   & .gradient-bg {
-    width: 100vw;
-    height: 100vh;
+    /*width: 100vw;
+    height: 100vh;*/
+    width: 100%;
+    height: 100%;
     position: absolute;
     overflow: hidden;
     background: radial-gradient(
