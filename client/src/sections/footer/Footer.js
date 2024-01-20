@@ -47,7 +47,7 @@ const FooterContainer = styled.footer`
 
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.95) 0%,
     rgba(0, 0, 0, 1) 100%
   );
   color: var(--color-white);

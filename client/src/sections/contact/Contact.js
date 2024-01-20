@@ -102,10 +102,9 @@ const ContactContainer = styled.section`
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.1) 2%,
-    rgba(0, 0, 0, 0.2) 5%,
+    rgba(0, 0, 0, 0.05) 2%,
+    rgba(0, 0, 0, 0.25) 5%,
     rgba(0, 0, 0, 0.7) 10%,
-    rgba(0, 0, 0, 0.79) 12%,
     rgba(0, 0, 0, 0.92) 15%,
     rgba(0, 0, 0, 1) 20%,
     rgba(0, 0, 0, 1) 100%
