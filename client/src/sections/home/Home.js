@@ -29,14 +29,12 @@ const Home = () => {
 export default Home;
 
 const HomeContainer = styled.section`
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 
   & .cardContainer {
-    position: absolute;
-    top: 30%;
-    left: 40%;
-    transform: translate(-50%, -50%);
     animation: float 3s ease-in-out infinite;
   }
 
