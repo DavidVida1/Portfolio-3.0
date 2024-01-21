@@ -82,9 +82,9 @@ const CardWrapper = styled.section`
 
       & img {
         position: absolute;
-        height: 20%;
+        height: 17%;
         width: 100%;
-        top: 35%;
+        top: 40%;
 
         background-position: center;
         background-repeat: no-repeat;

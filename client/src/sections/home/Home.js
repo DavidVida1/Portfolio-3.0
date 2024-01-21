@@ -37,7 +37,7 @@ const HomeContainer = styled.section`
     top: 30%;
     left: 40%;
     transform: translate(-50%, -50%);
-    animation: float 6s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
   }
 
   & .textWrapper {
