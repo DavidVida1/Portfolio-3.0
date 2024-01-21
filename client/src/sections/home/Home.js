@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../../elements/Card.js";
 import styled from "styled-components";
+import "../../animation.css";
 
 const Home = () => {
   return (
@@ -33,9 +34,10 @@ const HomeContainer = styled.section`
 
   & .cardContainer {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 40%;
     transform: translate(-50%, -50%);
+    animation: float 6s ease-in-out infinite;
   }
 
   & .textWrapper {
