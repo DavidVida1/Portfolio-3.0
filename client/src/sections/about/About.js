@@ -55,6 +55,9 @@ const AboutContainer = styled.section`
     rgba(0, 0, 0, 0.12) 0px -15px 15px, rgba(0, 0, 0, 0.12) 0px -15px 15px,
     rgba(0, 0, 0, 0.17) 0px -15px 15px, rgba(0, 0, 0, 0.09) 0px -15px 15px;
 
+  & h3 {
+    margin: 0px 100px;
+  }
   & .aboutWrappper {
     height: 100%;
     background: linear-gradient(

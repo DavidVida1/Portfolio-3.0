@@ -12,10 +12,10 @@ const Contact = () => {
 
       <div className="wrapper">
         <aside className="leftSide">
-          <h4>Have an awesome idea? Let's bring it to life.</h4>
+          <h4>Have an awesome idea?</h4>
           <p>
-            I am currently not available for freelance work. I am accepting new
-            projects starting from February 2022.
+            Let's team up and make it come alive with a touch of creativity and
+            a lot of technical magic in web development!
           </p>
 
           <aside className="media">
@@ -130,7 +130,7 @@ const ContactContainer = styled.section`
     & .leftSide {
       width: 100%;
       & p {
-        font-size: 3rem;
+        font-size: 4rem;
       }
 
       & .media {

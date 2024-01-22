@@ -50,14 +50,28 @@ const ProjectContainer = styled.section`
   padding-top: 30px;
   color: var(--color-white);
 
+  /*
+      background: linear-gradient(
+      180deg, 
+      rgba(0, 0, 0, 0) 0%, 
+      rgba(0, 0, 0, 0.2) 25%,     
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.6) 80%,
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 1) 95%,
+      rgba(0, 0, 0, 1) 100%,
+    );*/
+
+  & h3 {
+  }
+
   & .projectWrapper {
-    width: 100%;
-    height: 100%;
     display: grid;
 
     grid-gap: 100px;
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: 30% 5% 5% 30%;
     grid-template-rows: repeat(3, 200px);
+
     justify-content: center;
 
     & :first-child {
@@ -74,6 +88,7 @@ const ProjectContainer = styled.section`
       grid-column: 3 / 5;
       grid-row: 3 / 5;
     }
+
     & :nth-child(4) {
       grid-column: 1 / 5;
       grid-row: 5/6;
@@ -82,15 +97,14 @@ const ProjectContainer = styled.section`
     & a {
       position: relative;
       border: 5px solid rgba(0, 0, 0, 0.4);
-      /* background-color: rgba(0, 0, 0, 0.5);
-      padding: 15px;*/
-      border-radius: 5px;
+      border-radius: 10px;
       height: 100%;
       width: 100%;
       overflow: hidden;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
         rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
       & img {
         position: relative;
         border-radius: 5px;
@@ -199,8 +213,8 @@ const ProjectContainer = styled.section`
 
       &:hover {
         .kenburns-top {
-          -webkit-animation: kenburns-top 20s ease-out both;
-          animation: kenburns-top 20s ease-out both;
+          -webkit-animation: kenburns-top 10s ease-out both;
+          animation: kenburns-top 10s ease-out both;
         }
       }
     }

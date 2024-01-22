@@ -23,9 +23,9 @@ function App() {
         <Route path="/projects" exact element={<Projects />} />
         <Route path="/skills" exact element={<Skills />} />
         <Route path="/contact" exact element={<Contact />} />
-      </Routes>
+      </Routes>{" "}
+      <About />
       <AppContainer>
-        <About />
         <Projects />
         <Skills />
       </AppContainer>

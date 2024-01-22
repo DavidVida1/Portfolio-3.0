@@ -1,17 +1,22 @@
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import logo from "../../assets/logo.svg";
+import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelopeOpen } from "react-icons/fa";
 import styled from "styled-components";
+import FramerIcone from "../../FramerMotion/FramerIcone";
+
+/* trouver color patern ralentir les bnoule a larreire
+ */
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <nav>
-        {/*<div className="logo">
+      {/*<nav>
+        <div className="logo">
           <img src={logo} />
-        </div>*/}
-
+        </div>
+/*
         <ul>
           <li>
             <a className="navLink" href="#about">
@@ -34,17 +39,34 @@ const Header = () => {
             </a>
           </li>
         </ul>
-      </nav>
+      </nav>*/}
 
       <aside className="media">
         <ul>
-          <li>
-            <FaLinkedin />
-          </li>
+          <FramerIcone>
+            <li>
+              <a>
+                <FaLinkedin className="link" />
+              </a>
+            </li>
+          </FramerIcone>
 
-          <li>
-            <FaGithub />
-          </li>
+          <FramerIcone>
+            <li>
+              <a>
+                <FaGithub className="git" />
+              </a>
+            </li>
+          </FramerIcone>
+
+          <FramerIcone>
+            <li>
+              <a href="#contact">
+                <FaEnvelope className="mail" />
+                <FaEnvelopeOpen className="mailOpen" />
+              </a>
+            </li>
+          </FramerIcone>
         </ul>
       </aside>
     </HeaderContainer>
@@ -57,7 +79,7 @@ const HeaderContainer = styled.header`
   margin: 50px;
   z-index: 1;
 
-  & nav {
+  /* & nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -66,7 +88,7 @@ const HeaderContainer = styled.header`
       justify-content: space-between;
     }
 
-    /* & .logo {
+     & .logo {
       position: fixed;
 
       & img {
@@ -78,7 +100,7 @@ const HeaderContainer = styled.header`
       @media screen and (max-width: 1690px) {
         position: relative;
       }
-    }*/
+    }
     & ul {
       display: flex;
       flex-direction: column;
@@ -117,7 +139,7 @@ const HeaderContainer = styled.header`
         display: none;
       }
     }
-  }
+  }*/
 
   & .media {
     color: var(--color-white);
@@ -126,24 +148,44 @@ const HeaderContainer = styled.header`
       position: fixed;
       display: flex;
       flex-direction: column;
+      align-items: center;
       row-gap: 50px;
-      right: 3.5%;
-      top: 75%;
+      width: 100px;
+      right: 0;
+      top: 70%;
 
       & li {
         font-size: 3rem;
         transition: 0.3s;
 
-        & svg:first-child {
+        & .link {
           border-radius: 4px;
           box-shadow: 0px 0px 5px white;
         }
-        &:nth-child(2) svg {
+        & .git {
           border-radius: 15px;
           box-shadow: 0px 0px 5px white;
         }
+
+        & .mailOpen {
+          display: none;
+
+          color: var(--color-white);
+        }
+        & .mail {
+          color: inherit;
+          color: var(--color-white);
+        }
+
         &:hover {
-          transform: scale(1.8);
+          & .mail {
+            display: none;
+          }
+
+          & .mailOpen {
+            display: block;
+            color: var(--color-white);
+          }
         }
       }
     }

@@ -12,18 +12,20 @@ const Skills = () => {
           <div>
             <h4>My expertises.</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-              mauris porta ex dapibus luctus
+              With a diverse set of tools and technologies, I bring a unique
+              blend of creativity and technical prowess to the table, enabling
+              me to craft visually stunning and user-friendly digital solutions
+              with a touch of innovation.
             </p>
           </div>
 
-          <div>
+          {/*<div>
             <h4>My Design.</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
               mauris porta ex dapibus luctus
             </p>
-          </div>
+          </div>*/}
         </aside>
 
         <aside className="skillSection">

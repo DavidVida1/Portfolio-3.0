@@ -195,7 +195,7 @@ input {
 
   & h4 {
     margin-bottom: 30px;
-    font-size: clamp(3rem, 4.2vw, 5rem);
+    font-size: clamp(3rem, 4.2vw, 6rem);
       }
 
   & h5 {        
