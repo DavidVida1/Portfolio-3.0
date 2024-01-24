@@ -77,7 +77,7 @@ const ProjectContainer = styled.section`
   height: 100%;
   padding-top: 30px;
   color: var(--color-white);
-  border-radius: 10px;
+  border-radius: 15px;
   padding-bottom: 50px;
   background: linear-gradient(
     180deg,

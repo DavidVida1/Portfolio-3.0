@@ -8,7 +8,7 @@ import Projects from "./sections/projects/Projects";
 import Skills from "./sections/skills/Skills";
 import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
-import Loading from "./loading/Loading";
+import Loading from "./sections/loading/Loading";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Background from "./Background";
 
