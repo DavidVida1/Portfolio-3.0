@@ -1,31 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 import portrait from "../../assets/Crop-Iphone1Black2.png";
+import { motion, useAnimation, useInView } from "framer-motion";
 import styled from "styled-components";
 
+const textVariants = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerchildren: 0.1,
+    },
+  },
+};
+
 const About = () => {
-  useEffect(() => {
-    window.addEventListener("scroll", reveal);
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
 
-    function reveal() {
-      let reveals = document.querySelectorAll(".reveal");
-
-      reveals.forEach((reveal) => {
-        let windowHeight = window.innerHeight;
-        let revealTop = reveal.getBoundingClientRect().top;
-        let revealPoint = 150;
-
-        if (revealTop < windowHeight - revealPoint) {
-          reveal.classList.add("active");
-        } else {
-          reveal.classList.remove("active");
-        }
-      });
-    }
-  });
   return (
     <AboutContainer id="about">
       <div className="aboutWrappper">
-        <h3>About Me</h3>
+        <motion.h3
+          variants={textVariants}
+          initial="initial"
+          animate={isInView && "animate"}
+          ref={ref}
+          whileHover={{ color: "white" }}
+        >
+          About Me
+        </motion.h3>
         <aside className="aboutInfo">
           <img src={portrait} alt="portrait" />
 
@@ -37,7 +45,7 @@ const About = () => {
             rigor and digital creativity in the ever-evolving landscape of web
             development.
           </p>
-        </aside>{" "}
+        </aside>
       </div>
     </AboutContainer>
   );
@@ -54,6 +62,7 @@ const AboutContainer = styled.section`
   box-shadow: rgba(0, 0, 0, 0.25) 0px -15px 15px,
     rgba(0, 0, 0, 0.12) 0px -15px 15px, rgba(0, 0, 0, 0.12) 0px -15px 15px,
     rgba(0, 0, 0, 0.17) 0px -15px 15px, rgba(0, 0, 0, 0.09) 0px -15px 15px;
+  overflow-x: hidden;
 
   & h3 {
     margin: 0px 100px;
@@ -87,7 +96,7 @@ const AboutContainer = styled.section`
         mask-image: linear-gradient(#000, transparent);
 
         @media screen and (max-width: 1200px) {
-          min-width: 30%;
+          min-width: 25%;
         }
         @media screen and (max-width: 800px) {
           min-width: 40%;
@@ -97,18 +106,16 @@ const AboutContainer = styled.section`
       & p {
         padding: 0 50px;
         font-weight: 100;
-        font-size: clamp(3rem, 3.2vw, 4rem);
+        /* font-size: clamp(3rem, 3.2vw, 4rem);*/
+        font-size: clamp(3rem, 4.2vw, 5rem);
 
-        @media screen and (max-width: 700px) {
-          font-size: clamp(2.3rem, 4.3vw, 4rem);
-        }
-        @media screen and (max-width: 600px) {
-          font-size: clamp(2.9rem, 3.7vw, 4rem);
+        @media screen and (max-width: 1400px) {
+          font-size: clamp(2rem, 4.3vw, 4rem);
         }
 
-        @media screen and (max-width: 450px) {
+        /* @media screen and (max-width: 1200px) {
           font-size: clamp(2.6rem, 3.7vw, 4rem);
-        }
+        }*/
       }
 
       @media screen and (max-width: 700px) {

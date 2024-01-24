@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useRef } from "react";
 import { navPortfolio, projects } from "../../data/myData";
+import { motion, useAnimation, useInView } from "framer-motion";
 import styled from "styled-components";
 
+const textVariants = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerchildren: 0.1,
+    },
+  },
+};
+
 const Projects = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
+
   return (
     <ProjectContainer id="projects">
-      <h3>Projects</h3>
+      <motion.h3
+        variants={textVariants}
+        initial="initial"
+        animate={isInView && "animate"}
+        ref={ref}
+        whileHover={{ color: "white" }}
+      >
+        Projects
+      </motion.h3>
       <section className="projectWrapper">
         {/*selectedCategory est definie a linterieure ddu useEffect et a donc acces a Navportfolio*/}
         {projects.map((project) => {
@@ -45,31 +72,33 @@ const Projects = () => {
 export default Projects;
 
 const ProjectContainer = styled.section`
+  position: relative;
   width: 100%;
   height: 100%;
   padding-top: 30px;
   color: var(--color-white);
-
-  /*
-      background: linear-gradient(
-      180deg, 
-      rgba(0, 0, 0, 0) 0%, 
-      rgba(0, 0, 0, 0.2) 25%,     
-      rgba(0, 0, 0, 0.4) 50%,
-      rgba(0, 0, 0, 0.6) 80%,
-      rgba(0, 0, 0, 1) 90%,
-      rgba(0, 0, 0, 1) 95%,
-      rgba(0, 0, 0, 1) 100%,
-    );*/
+  border-radius: 10px;
+  padding-bottom: 50px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 15px,
+    rgba(0, 0, 0, 0.12) 0px 15px 15px, rgba(0, 0, 0, 0.12) 0px 15px 15px,
+    rgba(0, 0, 0, 0.17) 0px 15px 15px, rgba(0, 0, 0, 0.09) 0px 15px 15px;
 
   & h3 {
+    position: relative;
+    margin: 0px 100px;
   }
 
   & .projectWrapper {
     display: grid;
 
     grid-gap: 100px;
-    grid-template-columns: 30% 5% 5% 30%;
+    grid-template-columns: 20% 5% 5% 20%;
     grid-template-rows: repeat(3, 200px);
 
     justify-content: center;
@@ -226,13 +255,6 @@ const ProjectContainer = styled.section`
       & a {
         height: 75%;
         width: 75%;
-      }
-    }
-
-    @media screen and (max-width: 800px) {
-      & a {
-        height: 100%;
-        width: 100%;
       }
     }
   }

@@ -8,6 +8,7 @@ import Projects from "./sections/projects/Projects";
 import Skills from "./sections/skills/Skills";
 import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
+import Loading from "./loading/Loading";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Background from "./Background";
 
@@ -24,12 +25,13 @@ function App() {
         <Route path="/skills" exact element={<Skills />} />
         <Route path="/contact" exact element={<Contact />} />
       </Routes>{" "}
-      <About />
+      <About /> <Projects />
       <AppContainer>
-        <Projects />
         <Skills />
       </AppContainer>
-      <Contact /> <Footer />
+      <Contact />
+      <Footer />
+      <Loading />
     </BrowserRouter>
   );
 }

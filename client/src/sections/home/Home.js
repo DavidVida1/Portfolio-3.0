@@ -1,16 +1,73 @@
-import React from "react";
 import Card from "../../elements/Card.js";
 import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import "../../animation.css";
 
 const Home = () => {
+  const [scrollOpacity, setScrollOpacity] = useState(1);
+  const [scrollY, setScrollY] = useState(0);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const maxScroll = 800; // Adjust this value based on when you want the h2 to start fading out and moving down
+
+      // Calculate opacity based on scroll position
+      const newOpacity = 1 - scrollPosition / maxScroll;
+
+      // Calculate downward movement based on scroll position
+      const moveDown = scrollPosition / 5;
+
+      // Ensure opacity is between 0 and 1
+      setScrollOpacity(Math.max(0, Math.min(1, newOpacity)));
+
+      // Set the new scrollY position
+      setScrollY(moveDown);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [controls]);
+
+  // Update animation controls when scroll opacity changes
+  useEffect(() => {
+    controls.start({
+      opacity: scrollOpacity,
+      y: scrollY,
+    });
+  }, [scrollOpacity, scrollY, controls]);
+
+  const textVariants = {
+    initial: {
+      x: -500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerchildren: 0.1,
+      },
+    },
+  };
+
   return (
     <HomeContainer>
       <div className="cardContainer">
         <Card />
       </div>
 
-      <article className="textWrapper">
+      <motion.article
+        animate={(controls, "animate")}
+        className="textWrapper "
+        initial="initial"
+        variants={textVariants}
+      >
         <h2>css-obssesed</h2>
 
         <div className="text">
@@ -21,7 +78,7 @@ const Home = () => {
         </div>
 
         <h2>web developer</h2>
-      </article>
+      </motion.article>
     </HomeContainer>
   );
 };
@@ -33,41 +90,29 @@ const HomeContainer = styled.section`
   justify-content: center;
   align-items: center;
   height: 100vh;
-
+  overflow-x: hidden;
   & .cardContainer {
     animation: float 3s ease-in-out infinite;
+  }
+
+  & h2,
+  .text p {
+    transform: translateX(-30px);
   }
 
   & .textWrapper {
     position: absolute;
     bottom: 10%;
-    left: 5%;
+    left: 8%;
     color: var(--color-white);
     text-transform: uppercase;
     letter-spacing: 3px;
-
-    @media screen and (max-width: 700px) {
-      bottom: 13%;
-    }
-
-    @media screen and (max-width: 450px) {
-      h2 {
-        font-size: 3.6rem;
-      }
-    }
-
-    & h2:not(.text h2) {
-      transform: translateX(3rem);
-    }
 
     & .text {
       display: flex;
       width: 100%;
       letter-spacing: 5px;
 
-      @media screen and (max-width: 600px) {
-        flex-direction: column;
-      }
       & p {
         font-size: clamp(1.3rem, 1.2vw, 1.7rem);
         width: 32%;
@@ -94,6 +139,20 @@ const HomeContainer = styled.section`
         @media screen and (max-width: 600px) {
           width: 100%;
         }
+      }
+
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      bottom: 13%;
+    }
+
+    @media screen and (max-width: 450px) {
+      h2 {
+        font-size: 3.6rem;
       }
     }
   }

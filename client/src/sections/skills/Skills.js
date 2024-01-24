@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useRef } from "react";
 import { skillsData } from "..//../data/myData.js";
 import styled from "styled-components";
+import { motion, useAnimation, useInView } from "framer-motion";
+
+const textVariants = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerchildren: 0.1,
+    },
+  },
+};
 
 const Skills = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
+
   return (
     <SkillContainer id="skills">
-      <h3>Skills</h3>
+      <motion.h3
+        variants={textVariants}
+        initial="initial"
+        animate={isInView && "animate"}
+        ref={ref}
+        whileHover={{ color: "white" }}
+      >
+        Skills
+      </motion.h3>
 
       <div className="skillWrapper">
         <aside className="skillInfo">
@@ -18,14 +45,6 @@ const Skills = () => {
               with a touch of innovation.
             </p>
           </div>
-
-          {/*<div>
-            <h4>My Design.</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-              mauris porta ex dapibus luctus
-            </p>
-          </div>*/}
         </aside>
 
         <aside className="skillSection">
@@ -77,6 +96,10 @@ const SkillContainer = styled.section`
       align-items: center;
       @media screen and (max-width: 600px) {
         grid-template-columns: 50% auto;
+      }
+
+      @media screen and (max-width: 1500px) {
+        margin: 50px 0;
       }
     }
 

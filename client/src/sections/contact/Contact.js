@@ -1,14 +1,38 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
-
+import { motion, useAnimation, useInView } from "framer-motion";
 import { FaLinkedin } from "react-icons/fa";
-
 import { FaGithub } from "react-icons/fa";
 
+const textVariants = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerchildren: 0.1,
+    },
+  },
+};
+
 const Contact = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
   return (
     <ContactContainer id="contact">
-      <h3>Contact</h3>
+      <motion.h3
+        variants={textVariants}
+        initial="initial"
+        animate={isInView && "animate"}
+        ref={ref}
+        whileHover={{ color: "white" }}
+      >
+        Contact
+      </motion.h3>
 
       <div className="wrapper">
         <aside className="leftSide">
@@ -92,13 +116,6 @@ const ContactContainer = styled.section`
   padding-top: 30px;
   color: var(--color-white);
 
-  /* background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 50%,
-    rgba(0, 0, 0, 0.9) 93%,
-    rgba(0, 0, 0, 0) 100%
-  );*/
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,

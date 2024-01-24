@@ -189,7 +189,7 @@ const HeaderContainer = styled.header`
         }
       }
     }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
   }

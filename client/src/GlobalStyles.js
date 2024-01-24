@@ -188,6 +188,7 @@ input {
     padding: 50px 20px;
     text-transform: uppercase;
     font-size: 3rem;
+    font-size: clamp(3rem, 4.2vw, 5rem);
     font-weight: 700;
     text-shadow: 0 0 5px white;
   }
@@ -195,14 +196,14 @@ input {
 
   & h4 {
     margin-bottom: 30px;
-    font-size: clamp(3rem, 4.2vw, 6rem);
+    font-size: clamp(3rem, 4.2vw, 4rem);
       }
 
   & h5 {        
     color: rgba(217, 217, 217, 1);
     font-weight: 700;
     text-shadow: 0 0 5px white;
-    font-size: clamp(2.7rem, 3.5vw, 5rem);
+    font-size: clamp(2.7rem, 3.5vw, 4rem);
         }
 `;
 export default GlobalStyles;
