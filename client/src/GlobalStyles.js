@@ -200,10 +200,15 @@ input {
       }
 
   & h5 {        
-    color: rgba(217, 217, 217, 1);
     font-weight: 700;
     text-shadow: 0 0 5px white;
     font-size: clamp(2.7rem, 3.5vw, 4rem);
+        }
+
+  & h6 {        
+    font-weight: 500;
+    text-shadow: 0 0 5px white;
+    font-size: clamp(2.7rem, 3.5vw, 3rem);
         }
 `;
 export default GlobalStyles;

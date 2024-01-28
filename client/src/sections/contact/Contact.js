@@ -24,84 +24,98 @@ const Contact = () => {
   const isInView = useInView(ref, { margin: "-100px" });
   return (
     <ContactContainer id="contact">
-      <motion.h3
-        variants={textVariants}
-        initial="initial"
-        animate={isInView && "animate"}
-        ref={ref}
-        whileHover={{ color: "white" }}
-      >
-        Contact
-      </motion.h3>
+      <article className="contactText">
+        <motion.h3
+          variants={textVariants}
+          initial="initial"
+          animate={isInView && "animate"}
+          ref={ref}
+          whileHover={{ color: "white" }}
+        >
+          Have an awesome idea?
+        </motion.h3>
+
+        <h4>Let's team up and make it come alive with a touch of</h4>
+        <h4>Creativity and a lot of technical magic in web development!</h4>
+      </article>
 
       <div className="wrapper">
-        <aside className="leftSide">
-          <h4>Have an awesome idea?</h4>
-          <p>
-            Let's team up and make it come alive with a touch of creativity and
-            a lot of technical magic in web development!
-          </p>
-
-          <aside className="media">
-            <div>
-              <FaLinkedin />
+        <form
+          className="formContainer"
+          action="https://formspree.io/f/xjvqzolw"
+          method="POST"
+        >
+          <div className="nameWrapper">
+            <div className="nameContainer">
+              <label for="fname"></label>
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your name.."
+              />
             </div>
 
-            <div>
-              <FaGithub />
+            <div className="nameContainer">
+              <label for="lname"></label>
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Your last name.."
+              />
             </div>
-          </aside>
-        </aside>
+          </div>
 
-        <aside className="rightside">
-          <form
-            className="formContainer"
-            action="https://formspree.io/f/xjvqzolw"
-            method="POST"
-          >
-            <div className="nameWrapper">
-              <div className="nameContainer">
-                <label for="fname"></label>
-                <input
-                  type="text"
-                  id="fname"
-                  name="firstname"
-                  placeholder="Your name.."
-                />
-              </div>
+          <label for="email"></label>
+          <input
+            type="email"
+            placeholder="Enter Email..."
+            name="email"
+            id="email"
+            required
+          ></input>
 
-              <div className="nameContainer">
-                <label for="lname"></label>
-                <input
-                  type="text"
-                  id="lname"
-                  name="lastname"
-                  placeholder="Your last name.."
-                />
-              </div>
-            </div>
+          <label for="subject"></label>
+          <textarea
+            id="message"
+            type="message"
+            name="message"
+            placeholder="Write something.."
+            className="message"
+            rows="5"
+          ></textarea>
 
-            <label for="email"></label>
-            <input
-              type="email"
-              placeholder="Enter Email"
-              name="email"
-              id="email"
-              required
-            ></input>
+          <input type="submit" value="Submit" />
+        </form>
 
-            <label for="subject"></label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Write something.."
-              className="message"
-              rows="5"
-            ></textarea>
+        <div className="socials">
+          <h6>Socials</h6>
+          <ul>
+            <li>
+              <a>
+                <p>LinkedIn</p>
+              </a>
+            </li>
+            <li>
+              <a>
+                <p>Github</p>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-            <input type="submit" value="Submit" />
-          </form>
-        </aside>
+        <div className="localTime">
+          <h6>Local Time</h6>
+          <ul>
+            <li>
+              <p>Montreal</p>
+            </li>
+            <li>
+              <p> 2:00 pm to 2:00 am</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </ContactContainer>
   );
@@ -112,8 +126,7 @@ export default Contact;
 const ContactContainer = styled.section`
   position: relative;
   width: 100%;
-  height: 100%;
-  padding-top: 30px;
+  height: 98vh;
   color: var(--color-white);
 
   background: linear-gradient(
@@ -127,123 +140,128 @@ const ContactContainer = styled.section`
     rgba(0, 0, 0, 1) 100%
   );
 
-  & h3 {
-    padding: 50px 20px;
-    margin: 0px 100px;
+  & .contactText {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & h3 {
+      font-size: clamp(3rem, 6.2vw, 12rem);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      padding: 30px 20px;
+    }
+
+    & h4 {
+      align-self: center;
+      font-size: clamp(2rem, 4.2vw, 5rem);
+    }
+  }
+  & .wrapper {
+    position: relative;
+    display: grid;
+    grid-gap: 10%;
+    grid-template-columns: 45% 13% 13%;
+    padding-top: 75px;
+    margin: 0 100px;
+
+    & .formContainer {
+      display: flex;
+      flex-direction: column;
+
+      & label {
+        font-size: 2.5rem;
+      }
+
+      & input[type="text"],
+      input[type="email"] {
+        color: var(--color-white);
+        width: 100%;
+        margin: 30px 0px;
+        padding: 5px 0px;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        resize: vertical;
+        background: transparent;
+        outline-style: none;
+        border-bottom: 1px solid var(--color-white);
+      }
+
+      & textarea {
+        color: var(--color-white);
+        width: 100%;
+        padding: 5px 0px;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        resize: vertical;
+        background: transparent;
+        outline-style: none;
+        border-bottom: 1px solid var(--color-white);
+      }
+
+      & input::placeholder,
+      textarea::placeholder {
+        color: var(--color-white);
+        font-size: 1.5rem;
+      }
+
+      & input[type="submit"] {
+        background-color: rgba(99, 99, 99, 1);
+        color: white;
+        padding: 12px 20px;
+        margin-top: 20px;
+        width: 150px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #45a049;
+        }
+      }
+
+      & .nameWrapper {
+        display: flex;
+        gap: 0px 1rem;
+
+        & .nameContainer {
+          width: 100%;
+        }
+      }
+    }
+
+    & .socials,
+    .localTime {
+      margin-top: 18px;
+      & h6 {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          height: 1px;
+          width: 100%;
+          bottom: -1rem;
+          left: 0;
+          background: var(--color-white);
+        }
+      }
+
+      & ul {
+        font-size: 2rem;
+        font-weight: 300;
+        & li:first-child {
+          padding: 25px 0;
+        }
+      }
+    }
 
     @media screen and (max-width: 700px) {
       margin: 0px 50px;
     }
     @media screen and (max-width: 600px) {
       margin: 10px;
-    }
-  }
-  & .wrapper {
-    position: relative;
-    display: grid;
-    grid-template-columns: 50% auto;
-    margin: 0 100px;
-
-    & .leftSide {
-      width: 100%;
-      & p {
-        font-size: 4rem;
-      }
-
-      & .media {
-        display: flex;
-        flex-direction: row;
-        margin: 50px 0px;
-        gap: 0px 50px;
-        font-size: 3rem;
-
-        & div {
-          & svg:first-child {
-            border-radius: 4px;
-            box-shadow: 0px 0px 5px white;
-          }
-          &:nth-child(2) svg {
-            border-radius: 15px;
-            box-shadow: 0px 0px 5px white;
-          }
-        }
-
-        @media screen and (min-width: 700px) {
-          display: none;
-        }
-      }
-    }
-
-    & .rightside {
-      display: grid;
-      grid-template-rows: auto 11rem;
-
-      & .formContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-
-        & label {
-          font-size: 2.5rem;
-        }
-
-        & input[type="text"],
-        input[type="email"],
-        select,
-        textarea {
-          width: 100%;
-          padding: 8px;
-          border: 1px solid transparent;
-          box-sizing: border-box;
-          resize: vertical;
-          background: transparent;
-          outline-style: none;
-          border-bottom: 1px solid var(--color-white);
-        }
-
-        & input::placeholder,
-        textarea::placeholder {
-          color: var(--color-white);
-        }
-
-        & input[type="submit"] {
-          background-color: rgba(99, 99, 99, 1);
-          color: white;
-          padding: 12px 20px;
-          width: 150px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-
-          &:hover {
-            background-color: #45a049;
-          }
-        }
-
-        & .nameWrapper {
-          display: flex;
-          gap: 0px 1rem;
-
-          & .nameContainer {
-            width: 100%;
-          }
-
-          @media screen and (max-width: 700px) {
-            flex-direction: column;
-            gap: 1rem 0px;
-          }
-        }
-      }
-    }
-
-    @media screen and (max-width: 1000px) {
-      display: flex;
-      flex-direction: column;
-      row-gap: 50px;
-    }
-
-    @media screen and (max-width: 700px) {
-      margin: 0px 50px;
     }
   }
 `;

@@ -41,6 +41,7 @@ export default Footer;
 const FooterContainer = styled.footer`
   position: relative;
   display: flex;
+  height: 2.4vh;
   flex-direction: row;
   justify-content: space-between;
   padding: 0 50px;
