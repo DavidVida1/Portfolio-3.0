@@ -2,45 +2,21 @@ import Card from "../../elements/Card.js";
 import styled from "styled-components";
 import FramerTransition from "../../FramerMotion/FramerTransition.js";
 import React, { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import "../../animation.css";
 
 const Home = () => {
   const [scrollOpacity, setScrollOpacity] = useState(1);
-  const [scrollY, setScrollY] = useState(0);
-  const controls = useAnimation();
+  const [positionY, setPositionY] = useState(0);
+  const { scrollY, scrollYProgress } = useScroll();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const maxScroll = 800; // Adjust this value based on when you want the h2 to start fading out and moving down
-
-      // Calculate opacity based on scroll position
-      const newOpacity = 1 - scrollPosition / maxScroll;
-
-      // Calculate downward movement based on scroll position
-      const moveDown = scrollPosition / 5;
-
-      // Ensure opacity is between 0 and 1
-      setScrollOpacity(Math.max(0, Math.min(1, newOpacity)));
-
-      // Set the new scrollY position
-      setScrollY(moveDown);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [controls]);
-
-  // Update animation controls when scroll opacity changes
-  useEffect(() => {
-    controls.start({
-      opacity: scrollOpacity,
-      y: scrollY,
-    });
-  }, [scrollOpacity, scrollY, controls]);
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    const newOpacity = 1 - latest * 8;
+    const newPosition = latest * 1500;
+    setPositionY(newPosition);
+    setScrollOpacity(Math.max(0, Math.min(1, newOpacity)));
+    console.log(newOpacity);
+  });
 
   const textVariants = {
     initial: {
@@ -64,10 +40,14 @@ const Home = () => {
       </div>
 
       <motion.article
-        animate={(controls, "animate")}
+        /* animate={(controls, "animate")}*/
         className="textWrapper "
         initial="initial"
-        variants={textVariants}
+        /*  variants={textVariants}*/
+        style={{
+          opacity: scrollOpacity,
+          translateY: positionY,
+        }}
       >
         <h2>css-obssesed</h2>
 
@@ -105,7 +85,7 @@ const HomeContainer = styled.section`
     position: absolute;
     bottom: 10%;
     left: 8%;
-    color: var(--color-white);
+    color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
     letter-spacing: 3px;
 

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import portrait from "../../assets/Crop-Iphone1Black2.png";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import styled from "styled-components";
 
 const textVariants = {
@@ -30,7 +30,6 @@ const About = () => {
           initial="initial"
           animate={isInView && "animate"}
           ref={ref}
-          whileHover={{ color: "white" }}
         >
           About Me
         </motion.h3>
