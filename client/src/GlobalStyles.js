@@ -100,21 +100,44 @@ video {
   --color-offWhite: rgba(217,217,217);
   --color-black: rgba(0,0,0,1);
 
+  /* ORGINAL*/
+  /*blue center top bottom*/ 
+  /*--color1: 18, 113, 255;
 
-  --color1: 18, 113, 255;
-  --color2: 221, 74, 255;
+  /*pink center stays circle left*/ 
+  /*--color2: 221, 74, 255;
+
+  /* baby blue bottom*/
+  /*--color3: 100, 220, 255;
+
+  /*left to center*/
+  /*--color4: 200, 50, 50;
+
+  /*huge center center circle to left*/
+  /*--color5: 180, 180, 50;
+
+  /*Follow Mouse*/ 
+  /*--color-interactive: 140, 100, 255;*/
+
+   /*test1*/
+
+  --color1: 199, 82, 42;
+
+  --color2: 229, 193, 133;
+
   --color3: 100, 220, 255;
-  --color4: 200, 50, 50;
-  --color5: 180, 180, 50;
-  
-  --color-interactive: 140, 100, 255;
+
+  --color4:116, 168, 146;
+
+  --color5: 0, 133, 133;
+
+  --color-interactive: 251, 242, 196;
+
+
   --circle-size: 90%;
   
   --blending: hard-light;
       font-size:62.5%;
-  
-  
-
     }
 
     

@@ -1,5 +1,5 @@
 import carV2 from "../assets/carV2.jpg";
-import allStar from "../assets/allStar.jpg";
+import allStar from "../assets/allStar2.jpg";
 import lounge from "../assets/lounge.jpg";
 import portfolio3 from "../assets/portfolio3.PNG";
 

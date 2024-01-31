@@ -78,7 +78,7 @@ const ProjectContainer = styled.section`
   padding-top: 30px;
   color: var(--color-white);
   border-radius: 15px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
@@ -97,36 +97,47 @@ const ProjectContainer = styled.section`
   & .projectWrapper {
     display: grid;
 
-    grid-gap: 100px;
+    /*
     grid-template-columns: 20% 5% 5% 20%;
-    grid-template-rows: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);*/
+    grid-template-columns: 29.5% 29.5% 29.5%;
+    grid-template-rows: 45% 40%;
+    grid-gap: 30px;
 
     justify-content: center;
 
     & :first-child {
-      grid-column: 1 / 5;
-      grid-row: 1 / 3;
+      /*grid-column: 1 / 5;
+      grid-row: 1 / 3;*/
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
     }
 
     & :nth-child(2) {
-      grid-column: 1 / 3;
-      grid-row: 3 / 5;
+      /*grid-column: 1 / 3;
+      grid-row: 3 / 5;*/
+      grid-column: 2;
+      grid-row: 1 / 1;
     }
 
     & :nth-child(3) {
-      grid-column: 3 / 5;
-      grid-row: 3 / 5;
+      /*grid-column: 3 / 5;
+      grid-row: 3 / 5;*/
+      grid-column: 3;
+      grid-row: 1 / 1;
     }
 
     & :nth-child(4) {
-      grid-column: 1 / 5;
-      grid-row: 5/6;
+      /* grid-column: 1 / 5;
+      grid-row: 5/6;*/
+      grid-column: 1/4;
+      grid-row: 2/3;
     }
 
     & a {
       position: relative;
       border: 5px solid rgba(0, 0, 0, 0.4);
-      border-radius: 10px;
+      border-radius: 40px;
       height: 100%;
       width: 100%;
       overflow: hidden;
@@ -141,7 +152,7 @@ const ProjectContainer = styled.section`
         width: 100%;
       }
 
-      &::after,
+      /* &::after,
       &::before {
         content: " ";
         position: absolute;
@@ -165,13 +176,13 @@ const ProjectContainer = styled.section`
         right: 15px;
         border-top: 3px solid transparent;
         border-left: 3px solid transparent;
-      }
+      }*/
       & .overlay {
         position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-
+        border-radius: 40px;
         inset: 15px;
         padding: 10px 20px;
         color: var(--color-white);
@@ -247,7 +258,7 @@ const ProjectContainer = styled.section`
         }
       }
     }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1700px) {
       display: flex;
       flex-direction: column;
       align-items: center;

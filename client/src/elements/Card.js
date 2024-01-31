@@ -64,7 +64,6 @@ const CardWrapper = styled.section`
     height: 250px;
     background: rgba(21, 21, 21, 1);
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     border: 1px solid rgba(203, 155, 81, 0.2);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 

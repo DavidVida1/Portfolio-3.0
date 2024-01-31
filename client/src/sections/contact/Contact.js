@@ -88,34 +88,6 @@ const Contact = () => {
 
           <input type="submit" value="Submit" />
         </form>
-
-        <div className="socials">
-          <h6>Socials</h6>
-          <ul>
-            <li>
-              <a>
-                <p>LinkedIn</p>
-              </a>
-            </li>
-            <li>
-              <a>
-                <p>Github</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="localTime">
-          <h6>Local Time</h6>
-          <ul>
-            <li>
-              <p>Montreal</p>
-            </li>
-            <li>
-              <p> 2:00 pm to 2:00 am</p>
-            </li>
-          </ul>
-        </div>
       </div>
     </ContactContainer>
   );
@@ -147,7 +119,7 @@ const ContactContainer = styled.section`
     justify-content: center;
     align-items: center;
     & h3 {
-      font-size: clamp(3rem, 6.2vw, 12rem);
+      font-size: clamp(2rem, 6vw, 12rem);
       text-transform: uppercase;
       letter-spacing: 3px;
       padding: 30px 20px;
@@ -155,20 +127,29 @@ const ContactContainer = styled.section`
 
     & h4 {
       align-self: center;
-      font-size: clamp(2rem, 4.2vw, 5rem);
+      font-size: clamp(1rem, 3.6vw, 5rem);
     }
   }
   & .wrapper {
     position: relative;
-    display: grid;
-    grid-gap: 10%;
-    grid-template-columns: 45% 13% 13%;
-    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     margin: 0 100px;
 
     & .formContainer {
       display: flex;
       flex-direction: column;
+      padding: 30px 50px;
+      /*border-radius: 10px;
+      border: 1px solid rgba(203, 155, 81, 0.2);
+      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;*/
+      width: 50%;
 
       & label {
         font-size: 2.5rem;
@@ -185,7 +166,7 @@ const ContactContainer = styled.section`
         resize: vertical;
         background: transparent;
         outline-style: none;
-        border-bottom: 1px solid var(--color-white);
+        border-bottom: 2px solid var(--color-white);
       }
 
       & textarea {
@@ -197,7 +178,7 @@ const ContactContainer = styled.section`
         resize: vertical;
         background: transparent;
         outline-style: none;
-        border-bottom: 1px solid var(--color-white);
+        border-bottom: 2px solid var(--color-white);
       }
 
       & input::placeholder,
@@ -219,6 +200,10 @@ const ContactContainer = styled.section`
         &:hover {
           background-color: #45a049;
         }
+
+        @media screen and (max-width: 800px) {
+          align-self: center;
+        }
       }
 
       & .nameWrapper {
@@ -228,31 +213,9 @@ const ContactContainer = styled.section`
         & .nameContainer {
           width: 100%;
         }
-      }
-    }
 
-    & .socials,
-    .localTime {
-      margin-top: 18px;
-      & h6 {
-        position: relative;
-
-        &::after {
-          position: absolute;
-          content: "";
-          height: 1px;
-          width: 100%;
-          bottom: -1rem;
-          left: 0;
-          background: var(--color-white);
-        }
-      }
-
-      & ul {
-        font-size: 2rem;
-        font-weight: 300;
-        & li:first-child {
-          padding: 25px 0;
+        @media screen and (max-width: 800px) {
+          flex-direction: column;
         }
       }
     }
