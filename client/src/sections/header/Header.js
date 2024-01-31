@@ -178,6 +178,25 @@ const HeaderContainer = styled.header`
         }
 
         &:hover {
+          & .link {
+            border-radius: 4px;
+            box-shadow: 0px 0px 5px rgba(100, 220, 255, 1);
+          }
+          & .git {
+            border-radius: 15px;
+            box-shadow: 0px 0px 5px rgba(100, 220, 255, 1);
+          }
+
+          & .mailOpen {
+            display: none;
+
+            color: var(--color-white);
+          }
+          & .mail {
+            color: inherit;
+            color: var(--color-white);
+          }
+
           & .mail {
             display: none;
           }

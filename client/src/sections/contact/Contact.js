@@ -81,7 +81,7 @@ const Contact = () => {
             id="message"
             type="message"
             name="message"
-            placeholder="Write something.."
+            placeholder="Share your idea..."
             className="message"
             rows="5"
           ></textarea>

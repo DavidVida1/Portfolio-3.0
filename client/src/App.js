@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import Header from "./sections/header/Header";
@@ -11,26 +11,43 @@ import Footer from "./sections/footer/Footer";
 import Loading from "./sections/loading/Loading";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Background from "./Background";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <BrowserRouter>
       <GlobalStyles />
       <Header />
       <Background />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" exact element={<About />} />
-        <Route path="/projects" exact element={<Projects />} />
-        <Route path="/skills" exact element={<Skills />} />
-        <Route path="/contact" exact element={<Contact />} />
-      </Routes>{" "}
-      <About /> <Projects />
-      <AppContainer>
-        <Skills />
-      </AppContainer>
-      <Contact />
-      <Footer />
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" exact element={<About />} />
+            <Route path="/projects" exact element={<Projects />} />
+            <Route path="/skills" exact element={<Skills />} />
+            <Route path="/contact" exact element={<Contact />} />
+          </Routes>
+          <About />
+          <Projects />
+          <AppContainer>
+            <Skills />
+          </AppContainer>
+          <Contact />
+          <Footer />
+        </>
+      )}
     </BrowserRouter>
   );
 }

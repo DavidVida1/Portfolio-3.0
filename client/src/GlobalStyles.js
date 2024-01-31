@@ -133,6 +133,7 @@ video {
 
   --color-interactive: 251, 242, 196;
 
+ --letter-size: 20rem;
 
   --circle-size: 90%;
   
@@ -198,6 +199,8 @@ input {
         border-collapse: collapse;
         border-spacing: 0;
     }
+
+
 
   & h2 {     
     display: inline;

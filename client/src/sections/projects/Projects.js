@@ -264,8 +264,8 @@ const ProjectContainer = styled.section`
       align-items: center;
 
       & a {
-        height: 75%;
-        width: 75%;
+        height: 55%;
+        width: 55%;
       }
     }
   }
