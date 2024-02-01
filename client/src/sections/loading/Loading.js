@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import FramerTransition from "../../FramerMotion/FramerTransition.js";
 import RingLoader from "react-spinners/RingLoader";
 
 const Loading = () => {

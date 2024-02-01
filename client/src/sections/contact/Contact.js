@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
-import { motion, useAnimation, useInView } from "framer-motion";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
 
 const textVariants = {
   initial: {

@@ -133,7 +133,7 @@ video {
 
   --color-interactive: 251, 242, 196;
 
- --letter-size: 20rem;
+ --letter-size: 16rem;
 
   --circle-size: 90%;
   

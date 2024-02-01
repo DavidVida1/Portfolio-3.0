@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import { navPortfolio, projects } from "../../data/myData";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { projects } from "../../data/myData";
+import { motion, useInView } from "framer-motion";
 import styled from "styled-components";
 
 const textVariants = {

@@ -14,13 +14,13 @@ import Background from "./Background";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
+    setLoading(false);
+    /*setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 3000);*/
   }, []);
 
   return (
@@ -34,16 +34,15 @@ function App() {
         <>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" exact element={<About />} />
-            <Route path="/projects" exact element={<Projects />} />
-            <Route path="/skills" exact element={<Skills />} />
-            <Route path="/contact" exact element={<Contact />} />
           </Routes>
+
           <About />
           <Projects />
+
           <AppContainer>
             <Skills />
           </AppContainer>
+
           <Contact />
           <Footer />
         </>

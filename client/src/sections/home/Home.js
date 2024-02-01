@@ -1,7 +1,6 @@
 import Card from "../../elements/Card.js";
 import styled from "styled-components";
-import FramerTransition from "../../FramerMotion/FramerTransition.js";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import "../../animation.css";
 
