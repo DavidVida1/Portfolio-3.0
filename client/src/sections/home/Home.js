@@ -24,11 +24,12 @@ const Home = () => {
     },
     animate: {
       x: 0,
-      opacity: 1,
+      opacity: scrollOpacity,
       transition: {
         duration: 1,
         staggerchildren: 0.1,
       },
+      translateY: positionY,
     },
   };
 
@@ -39,14 +40,10 @@ const Home = () => {
       </div>
 
       <motion.article
-        /* animate={(controls, "animate")}*/
+        animate="animate"
         className="textWrapper "
         initial="initial"
-        /*  variants={textVariants}*/
-        style={{
-          opacity: scrollOpacity,
-          translateY: positionY,
-        }}
+        variants={textVariants}
       >
         <h2>css-obssesed</h2>
 

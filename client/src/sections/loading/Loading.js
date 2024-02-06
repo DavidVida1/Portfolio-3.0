@@ -1,27 +1,90 @@
 import React from "react";
 import styled from "styled-components";
 import RingLoader from "react-spinners/RingLoader";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const Loading = () => {
+  const animationFirst = {
+    initial: {
+      x: -500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerchildren: 0.1,
+      },
+    },
+  };
+
+  const animationLast = {
+    initial: {
+      y: -500,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        staggerchildren: 0.1,
+      },
+    },
+  };
+
+  const animationJob = {
+    initial: {
+      x: -500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.7,
+        staggerchildren: 0.1,
+      },
+    },
+  };
   return (
     <LoadingContainer>
       <div className="section_wrapper">
         <div className="r-container">
-          <div className="r-text first">⇻David</div>
-          <aside>
-            <div className="r-text last">Vidal↲</div>
-          </aside>
-          <div className="r-text job">
+          <motion.div
+            className="r-text first"
+            animate="animate"
+            initial="initial"
+            variants={animationFirst}
+          >
+            ⇻David
+          </motion.div>
+
+          <motion.div
+            className="r-text last"
+            animate="animate"
+            initial="initial"
+            variants={animationLast}
+          >
+            Vidal↲
+          </motion.div>
+
+          <motion.div
+            className="r-text job"
+            animate="animate"
+            initial="initial"
+            variants={animationJob}
+          >
             →Fr&nbsp;
             <RingLoader
               color="#FFFF"
               cssOverride={{}}
-              margin={20}
-              size={130}
-              speedMultiplier={1}
+              size={120}
+              speedMultiplier={1.3}
             />
             &nbsp;nt-End▻
-          </div>
+          </motion.div>
         </div>
       </div>
     </LoadingContainer>
@@ -43,32 +106,29 @@ const LoadingContainer = styled.section`
 
     & .r-container {
       position: relative;
-      width: 100%;
       z-index: 10;
-
-      & aside {
-        display: flex;
-      }
 
       & .r-text {
         position: relative;
         display: flex;
         overflow: hidden;
+        height: 100%;
         font-weight: 500;
         color: var(--color-white);
         text-shadow: 0px 0px 5px white;
         font-size: var(--letter-size);
-        height: var(--letter-size);
+        text-transform: uppercase;
       }
 
       & .first {
-        padding-left: 48rem;
-      }
-      & .last {
         padding-left: 24rem;
       }
+      & .last {
+        padding-left: 12rem;
+      }
       & .job {
-        padding-left: 41rem;
+        padding-left: 20rem;
+        padding-bottom: 60px;
       }
 
       & a {

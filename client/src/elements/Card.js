@@ -88,16 +88,7 @@ const CardWrapper = styled.section`
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100%;
-        /*background-image: linear-gradient(
-          to right,
-          #462523 0,
-          #cb9b51 22%,
-          #f6e27a 45%,
-          #f6f2c0 50%,
-          #f6e27a 55%,
-          #cb9b51 78%,
-          #462523 100%
-        );*/
+
         -webkit-mask-image: url(${logo}),
           linear-gradient(to bottom, #000, transparent 70%),
           linear-gradient(to bottom, transparent 95%, #000),
