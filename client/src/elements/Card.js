@@ -7,6 +7,7 @@ import logo from "../assets/logo.svg";
 import logoGold from "../assets/logoGold.svg";
 
 const Card = () => {
+  /*if the card is click toggles the isFlipped and changes the class from font to back*/
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleCardClick = () => {

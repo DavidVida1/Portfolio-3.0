@@ -10,11 +10,15 @@ const Home = () => {
   const { scrollY, scrollYProgress } = useScroll();
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const newOpacity = 1 - latest * 8;
+    /*text goes down if scroll down and opacity is reduced until 0 is reached */
     const newPosition = latest * 1500;
     setPositionY(newPosition);
+    /**/
+
+    /*opacity reaches 0 when scrolling down*/
+    const newOpacity = 1 - latest * 8;
     setScrollOpacity(Math.max(0, Math.min(1, newOpacity)));
-    console.log(newOpacity);
+    /**/
   });
 
   const textVariants = {
