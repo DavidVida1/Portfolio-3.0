@@ -1,8 +1,8 @@
-import Card from "../../elements/Card.js";
+import Card from "./Card.js";
 import styled from "styled-components";
 import React, { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import "../../animation.css";
+import "../animation.css";
 
 const Home = () => {
   const [scrollOpacity, setScrollOpacity] = useState(1);
@@ -11,7 +11,7 @@ const Home = () => {
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     /*text goes down if scroll down and opacity is reduced until 0 is reached */
-    const newPosition = latest * 1500;
+    const newPosition = latest * 3000;
     setPositionY(newPosition);
     /**/
 
@@ -72,6 +72,7 @@ const HomeContainer = styled.section`
   align-items: center;
   height: 100vh;
   overflow-x: hidden;
+
   & .cardContainer {
     animation: float 3s ease-in-out infinite;
   }
@@ -88,6 +89,10 @@ const HomeContainer = styled.section`
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
     letter-spacing: 3px;
+
+    & :hover {
+      filter: drop-shadow(0 0 1px var(--color-offWhite));
+    }
 
     & .text {
       display: flex;

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { projects } from "../../data/myData";
+import { projects } from "./../data/myData";
 import { motion, useInView } from "framer-motion";
 import styled from "styled-components";
 

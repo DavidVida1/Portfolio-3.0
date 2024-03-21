@@ -94,10 +94,10 @@ const BackgroundContainer = styled.section`
     overflow: hidden;
     background: radial-gradient(
       circle,
-      rgba(78, 80, 94, 1) 0%,
-      rgba(0, 0, 0, 1) 83%,
-      rgba(0, 0, 0, 1) 100%
+      rgba(82, 94, 120, 0.5) 0%,
+      rgba(25, 33, 46, 1) 30%
     );
+
     top: 0;
     left: 0;
 
@@ -126,7 +126,7 @@ const BackgroundContainer = styled.section`
         left: calc(50% - var(--circle-size) / 2);
 
         transform-origin: center center;
-        animation: moveVertical 30s ease infinite;
+        animation: moveVertical 40s ease infinite;
 
         opacity: 1;
       }
@@ -147,7 +147,7 @@ const BackgroundContainer = styled.section`
         left: calc(50% - var(--circle-size) / 2);
 
         transform-origin: calc(50% - 400px);
-        animation: moveInCircle 20s reverse infinite;
+        animation: moveInCircle 30s reverse infinite;
 
         opacity: 1;
       }
@@ -168,7 +168,7 @@ const BackgroundContainer = styled.section`
         left: calc(50% - var(--circle-size) / 2 - 500px);
 
         transform-origin: calc(50% + 400px);
-        animation: moveInCircle 40s linear infinite;
+        animation: moveInCircle 50s linear infinite;
 
         opacity: 1;
       }
@@ -189,7 +189,7 @@ const BackgroundContainer = styled.section`
         left: calc(50% - var(--circle-size) / 2);
 
         transform-origin: calc(50% - 200px);
-        animation: moveHorizontal 40s ease infinite;
+        animation: moveHorizontal 50s ease infinite;
 
         opacity: 0.7;
       }
@@ -210,7 +210,7 @@ const BackgroundContainer = styled.section`
         left: calc(50% - var(--circle-size));
 
         transform-origin: calc(50% - 800px) calc(50% + 200px);
-        animation: moveInCircle 20s ease infinite;
+        animation: moveInCircle 30s ease infinite;
 
         opacity: 1;
       }

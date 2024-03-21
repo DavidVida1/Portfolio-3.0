@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaEnvelopeOpen } from "react-icons/fa";
 import styled from "styled-components";
-import FramerIcone from "../../FramerMotion/FramerIcone";
+import FramerIcone from "../FramerMotion/FramerIcone";
 
 const Header = () => {
   return (
@@ -63,35 +63,28 @@ const HeaderContainer = styled.header`
         font-size: 3rem;
         transition: 0.3s;
 
-        & .link {
-          border-radius: 4px;
-          box-shadow: 0px 0px 5px white;
-          color: var(--color-white);
-        }
-        & .git {
-          border-radius: 15px;
-          box-shadow: 0px 0px 5px white;
+        & .link,
+        .git,
+        .mail {
           color: var(--color-white);
         }
 
         & .mailOpen {
           display: none;
-
-          color: var(--color-white);
-        }
-        & .mail {
-          color: inherit;
-          color: var(--color-white);
         }
 
         &:hover {
+          filter: drop-shadow(0 0 3px var(--color-white));
+
           & .link {
             border-radius: 4px;
             box-shadow: 0px 0px 5px rgba(100, 220, 255, 1);
+            border-radius: 4px;
+            box-shadow: 0px 0px 5px white;
           }
           & .git {
             border-radius: 15px;
-            box-shadow: 0px 0px 5px rgba(100, 220, 255, 1);
+            box-shadow: 0px 0px 5px white;
           }
 
           & .mailOpen {

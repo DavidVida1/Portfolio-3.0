@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { skillsData } from "..//../data/myData.js";
+import { skillsData } from "../data/myData.js";
 import styled from "styled-components";
 import { motion, useAnimation, useInView } from "framer-motion";
 

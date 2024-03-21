@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import portrait from "../../assets/Crop-Iphone1Black2.png";
+import portrait from "../assets/Crop-Iphone1Black2.png";
 import { motion, useInView } from "framer-motion";
 import styled from "styled-components";
 

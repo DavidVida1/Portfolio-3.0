@@ -100,38 +100,27 @@ video {
   --color-offWhite: rgba(217,217,217);
   --color-black: rgba(0,0,0,1);
 
-  /* ORGINAL*/
+
+  /*Color Smoke
+  --color1: 82, 94, 120;
+  --color2:  78, 82, 107;
+  --color3:  27, 94, 175;
+  --color4:71,83,109;
+  --color5: 72, 86, 113;*/
+
+
   /*blue center top bottom*/ 
-  /*--color1: 18, 113, 255;
-
-  /*pink center stays circle left*/ 
-  /*--color2: 221, 74, 255;
-
-  /* baby blue bottom*/
-  /*--color3: 100, 220, 255;
-
-  /*left to center*/
-  /*--color4: 200, 50, 50;
-
-  /*huge center center circle to left*/
-  /*--color5: 180, 180, 50;
-
-  /*Follow Mouse*/ 
-  /*--color-interactive: 140, 100, 255;*/
-
-   /*test1*/
-
   --color1: 199, 82, 42;
-
+  /*pink center stays circle left*/ 
   --color2: 229, 193, 133;
-
+  /* baby blue bottom*/
   --color3: 100, 220, 255;
-
+ /*left to center*/
   --color4:116, 168, 146;
-
+  /*huge center center circle to left*/
   --color5: 0, 133, 133;
 
-  --color-interactive: 251, 242, 196;
+  --color-interactive: 101,217,254;
 
  --letter-size:  clamp(3rem, 9vw, 16rem);
 
@@ -207,7 +196,7 @@ input {
     font-size: clamp(4rem, 4.2vw, 6rem);
     text-shadow: 0 0 5px white;
     font-weight: 700;
-    text-shadow: 0 0 5px white;
+
   }
 
   & h3 {
@@ -217,6 +206,8 @@ input {
     font-size: clamp(3rem, 4.2vw, 5rem);
     font-weight: 700;
     text-shadow: 0 0 5px white;
+    filter: drop-shadow(0 0 1px var(--color-white));
+
   }
 
 
