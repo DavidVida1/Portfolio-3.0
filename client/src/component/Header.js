@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
@@ -7,57 +7,111 @@ import styled from "styled-components";
 import FramerIcone from "../FramerMotion/FramerIcone";
 
 const Header = () => {
+  const [showMedia, setShowMedia] = useState(false);
+
+  /*animation made with css and note FramerMotion*/
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMedia(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <HeaderContainer>
-      <aside className="media">
-        <ul>
-          <FramerIcone>
+      {showMedia && (
+        <aside className="headerList">
+          <ul>
             <li>
-              <a href="https://www.linkedin.com/in/david-vidal-dev/">
-                <FaLinkedin className="link" />
-              </a>
+              <a href="#about">About</a>
             </li>
-          </FramerIcone>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </aside>
+      )}
 
-          <FramerIcone>
-            <li>
-              <a href="https://github.com/DavidVida1">
-                <FaGithub className="git" />
-              </a>
-            </li>
-          </FramerIcone>
+      {showMedia && (
+        <aside className="media">
+          <ul>
+            <FramerIcone>
+              <li>
+                <a href="https://www.linkedin.com/in/david-vidal-dev/">
+                  <FaLinkedin className="link" />
+                </a>
+              </li>
+            </FramerIcone>
 
-          <FramerIcone>
-            <li>
-              <a href="#contact">
-                <FaEnvelope className="mail" />
-                <FaEnvelopeOpen className="mailOpen" />
-              </a>
-            </li>
-          </FramerIcone>
-        </ul>
-      </aside>
+            <FramerIcone>
+              <li>
+                <a href="https://github.com/DavidVida1">
+                  <FaGithub className="git" />
+                </a>
+              </li>
+            </FramerIcone>
+
+            <FramerIcone>
+              <li>
+                <a href="#contact">
+                  <FaEnvelope className="mail" />
+                  <FaEnvelopeOpen className="mailOpen" />
+                </a>
+              </li>
+            </FramerIcone>
+          </ul>
+        </aside>
+      )}
     </HeaderContainer>
   );
 };
 const HeaderContainer = styled.header`
   position: absolute;
-  font-family: "Roboto", sans-serif;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   font-weight: 700;
-  margin: 50px;
+  font-family: "Roboto", sans-serif;
   z-index: 1;
+  margin: 50px 0px;
+
+  & .headerList {
+    font-size: clamp(2rem, 3.2vw, 2rem);
+    animation: slideFromRightAnimation 0.5s forwards;
+
+    & li {
+      padding: 1rem;
+      letter-spacing: 3px;
+
+      & a {
+        text-decoration: none;
+        color: var(--color-white);
+      }
+    }
+  }
 
   & .media {
+    position: fixed;
+    display: flex;
+    right: 0;
+    bottom: 50px;
+    animation: slideFromRightAnimation 0.5s forwards;
+
     & ul {
-      position: fixed;
       display: flex;
       flex-direction: column;
       align-items: center;
-
       row-gap: 50px;
       width: 100px;
-      right: 0;
-      top: 70%;
 
       & li {
         font-size: 3rem;
@@ -110,6 +164,17 @@ const HeaderContainer = styled.header`
     }
     @media screen and (max-width: 800px) {
       display: none;
+    }
+  }
+
+  @keyframes slideFromRightAnimation {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 `;

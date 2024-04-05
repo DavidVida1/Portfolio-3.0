@@ -3,25 +3,24 @@ import portrait from "../assets/Crop-Iphone1Black2.png";
 import { motion, useInView } from "framer-motion";
 import styled from "styled-components";
 
-const textVariants = {
-  initial: {
-    x: -500,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerchildren: 0.1,
-    },
-  },
-};
-
 const About = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
 
+  const textVariants = {
+    initial: {
+      x: -500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerchildren: 0.1,
+      },
+    },
+  };
   return (
     <AboutContainer id="about">
       <div className="aboutWrappper">
