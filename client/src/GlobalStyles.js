@@ -175,6 +175,11 @@ input {
     }
     ol, ul {
         list-style: none;
+        text-decoration: none;
+
+    }
+    a {        
+      text-decoration: none;
     }
     blockquote, q {
         quotes: none;
@@ -228,4 +233,13 @@ input {
     font-size: clamp(2.7rem, 3.5vw, 3rem);
         }
 `;
+
+/*
+Breakpoints
+Min-width: 320px (smaller phone viewpoints)
+Min-width: 480px (small devices and most phones)
+Min-width: 768px (most tablets)
+Min-width: 992px (smaller desktop viewpoints)
+Min-width: 1200px (large devices and wide screens)
+*/
 export default GlobalStyles;

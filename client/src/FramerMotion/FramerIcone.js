@@ -1,8 +1,7 @@
 import { useRef, useState } from "react";
-
 import { motion } from "framer-motion";
 
-export default function FramerIcone({ children }) {
+const FramerIcone = ({ children }) => {
   const ref = useRef(null);
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -37,4 +36,6 @@ export default function FramerIcone({ children }) {
       {children}
     </motion.div>
   );
-}
+};
+
+export default FramerIcone;
