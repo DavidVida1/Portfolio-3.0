@@ -242,4 +242,100 @@ Min-width: 768px (most tablets)
 Min-width: 992px (smaller desktop viewpoints)
 Min-width: 1200px (large devices and wide screens)
 */
+
+/* useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const sectionPosition = document.getElementById("about").offsetTop;
+      const burgerVisible = document.getElementById("burger");
+
+      if (scrollPosition >= sectionPosition) {
+        burgerVisible.classList.add("menuVisible");
+      } else {
+        burgerVisible.classList.remove("menuVisible");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);*/
+
+/*& .headerList {
+  margin: 50px 0px;
+  font-size: 2rem;
+  animation: slideFromRightAnimation 0.5s forwards;
+
+  & li {
+    padding: 1rem;
+    letter-spacing: 3px;
+
+    & a {
+      color: var(--color-white);
+    }
+  }
+}
+
+
+  & .media {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 50px 0px;
+    right: 0;
+    bottom: 0px;
+    animation: slideFromRightAnimation 0.5s forwards;
+
+    & .menu {
+      visibility: hidden;
+      position: relative;
+      width: 35px;
+      height: 35px;
+      margin-top: 100px;
+      background-color: var(--color-white);
+      border-radius: 3px;
+      cursor: pointer;
+
+      & div {
+        position: absolute;
+        width: 15px;
+        height: 0px;
+        margin: 0px;
+
+        & span {
+          background: rgba(25, 33, 46, 1);
+          width: 100%;
+          height: 5px;
+          border-radius: 5px;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(30%, 300%);
+          transition: transform 0.5s, width 0s;
+        }
+      }
+
+      & .line-1 {
+        transform: translate(30%, 5px);
+      }
+
+      & .line-3 {
+        transform: translate(30%, 25px);
+      }
+    }
+
+    .openMenu .line-1 {
+      transform: translate(30%, 300%) rotate(-45deg);
+    }
+    .openMenu .line-3 {
+      transform: translate(30%, 300%) rotate(45deg);
+    }
+    .openMenu .line-2 {
+      width: 0px;
+    }*/
+
 export default GlobalStyles;
