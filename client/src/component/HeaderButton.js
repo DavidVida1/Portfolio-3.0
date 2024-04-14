@@ -43,6 +43,7 @@ const ButtonHeader = styled.aside`
   overflow: hidden;
   cursor: pointer;
   animation: slideFromRightAnimation 0.5s forwards;
+  box-shadow: 0 0 5px white;
 
   & .slider {
     position: relative;
