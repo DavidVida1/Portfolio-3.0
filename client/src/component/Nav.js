@@ -67,8 +67,8 @@ const Nav = ({ isActive }) => {
               </motion.div>
             </div>
           );
-        })}{" "}
-        <NavFooter />
+        })}
+        <NavFooter isActive={isActive} />
       </div>
     </NavWrapperMotion>
   );

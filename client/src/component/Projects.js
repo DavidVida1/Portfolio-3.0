@@ -74,7 +74,7 @@ export default Projects;
 const ProjectContainer = styled.section`
   position: relative;
   width: 100%;
-  height: 100dvh;
+  height: 100%;
   padding-top: 30px;
   color: var(--color-white);
 

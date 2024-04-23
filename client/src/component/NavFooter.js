@@ -1,18 +1,47 @@
 import React, { useRef, useState } from "react";
 import { mediaData } from "../data/myData";
+import { motion, useInView } from "framer-motion";
 import styled from "styled-components";
 
-const NavFooter = () => {
+const NavFooter = ({ isActive }) => {
+  const slideIn = {
+    initial: {
+      opacity: 0,
+      y: 120,
+    },
+
+    enter: (mediaId) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        delay: 0.75 + mediaId * 0.1,
+        ease: [0.215, 0.61, 0.355, 1],
+      },
+    }),
+
+    exit: {
+      opacity: 0,
+      transition: { duration: 0.5, type: "tween", ease: "easeInOut" },
+    },
+  };
+
   return (
     <NavFooterContainer>
       <div className="footer">
-        {mediaData.map((media, i) => {
+        {mediaData.map((media, mediaId) => {
           return (
-            <div>
-              <a className="footerText" href={media.href}>
-                {media.name}
-              </a>
-            </div>
+            <motion.a
+              variants={slideIn}
+              custom={mediaId}
+              initial="initial"
+              animate={isActive ? "enter" : "exit"}
+              className="footerText"
+              href={media.href}
+              key={mediaId}
+            >
+              {media.name}
+            </motion.a>
           );
         })}
       </div>
