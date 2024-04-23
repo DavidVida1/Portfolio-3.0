@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { skillsData } from "../data/myData.js";
 import styled from "styled-components";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -47,9 +47,9 @@ const Skills = () => {
           </div>
         </aside>
 
-        <aside className="skillSection">
-          {skillsData.map((skill) => (
-            <h5>{skill.name}</h5>
+        <aside className="skillSection skillText glassBg">
+          {skillsData.map((skill, id) => (
+            <h5 key={id}>{skill.name}</h5>
           ))}
         </aside>
       </div>
@@ -66,10 +66,10 @@ const SkillContainer = styled.section`
   justify-content: center;
 
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   font-size: 5rem;
-  padding-top: 30px;
   color: var(--color-white);
+  z-index: 10;
 
   & .skillWrapper {
     display: grid;
@@ -83,7 +83,7 @@ const SkillContainer = styled.section`
       row-gap: 50px;
 
       & p {
-        font-weight: 100;
+        font-weight: 300;
         width: 90%;
         font-size: clamp(3rem, 4.2vw, 5rem);
       }
@@ -94,6 +94,8 @@ const SkillContainer = styled.section`
       grid-template-columns: 55% auto;
       justify-content: center;
       align-items: center;
+      border-radius: 5px;
+
       @media screen and (max-width: 600px) {
         grid-template-columns: 50% auto;
       }

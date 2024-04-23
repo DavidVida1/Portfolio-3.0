@@ -45,7 +45,7 @@ const Contact = () => {
         >
           <div className="nameWrapper">
             <div className="nameContainer">
-              <label for="fname"></label>
+              <label htmlFor="fname"></label>
               <input
                 type="text"
                 id="fname"
@@ -55,7 +55,7 @@ const Contact = () => {
             </div>
 
             <div className="nameContainer">
-              <label for="lname"></label>
+              <label htmlFor="lname"></label>
               <input
                 type="text"
                 id="lname"
@@ -65,7 +65,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <label for="email"></label>
+          <label htmlFor="email"></label>
           <input
             type="email"
             placeholder="Enter Email..."
@@ -74,7 +74,7 @@ const Contact = () => {
             required
           ></input>
 
-          <label for="subject"></label>
+          <label htmlFor="subject"></label>
           <textarea
             id="message"
             type="message"
@@ -96,8 +96,9 @@ export default Contact;
 const ContactContainer = styled.section`
   position: relative;
   width: 100%;
-  height: 98vh;
+  height: 98dvh;
   color: var(--color-white);
+  z-index: 10;
 
   background: linear-gradient(
     180deg,
@@ -136,8 +137,8 @@ const ContactContainer = styled.section`
     align-items: center;
     padding-top: 50px;
     border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    /*box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;*/
     margin: 0 100px;
 
     & .formContainer {

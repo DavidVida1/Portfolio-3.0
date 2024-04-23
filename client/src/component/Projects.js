@@ -35,9 +35,9 @@ const Projects = () => {
       </motion.h3>
       <section className="projectWrapper">
         {/*selectedCategory est definie a linterieure ddu useEffect et a donc acces a Navportfolio*/}
-        {projects.map((project) => {
+        {projects.map((project, id) => {
           return (
-            <a href={project.link}>
+            <a href={project.link} key={id}>
               <img
                 className="a kenburns-top"
                 src={project.projectImg}
@@ -77,17 +77,23 @@ const ProjectContainer = styled.section`
   height: 100%;
   padding-top: 30px;
   color: var(--color-white);
-  border-radius: 20px;
+
   padding-bottom: 30px;
   background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 50%,
-    rgba(0, 0, 0, 1) 100%
+    360deg,
+    rgba(0, 0, 0, 0.99) 75%,
+    rgba(0, 0, 0, 0.95) 80%,
+    rgba(0, 0, 0, 0.9) 85%,
+    rgba(0, 0, 0, 0.85) 90%,
+    rgba(0, 0, 0, 0.8) 95%,
+    rgba(0, 0, 0, 0.77) 100%
   );
+
   box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 15px,
     rgba(0, 0, 0, 0.12) 0px 15px 15px, rgba(0, 0, 0, 0.12) 0px 15px 15px,
     rgba(0, 0, 0, 0.17) 0px 15px 15px, rgba(0, 0, 0, 0.09) 0px 15px 15px;
+  border-radius: 0px 0px 20px 20px;
+  z-index: 10;
 
   & h3 {
     position: relative;

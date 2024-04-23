@@ -4,13 +4,24 @@ import lounge from "../assets/lounge.jpg";
 import portfolio3 from "../assets/portfolio3.PNG";
 
 const navListData = [
-  { _id: 1, href: "/", name: "Home", active: true },
-  { _id: 2, href: "/about", name: "About", active: false },
-  { _id: 3, href: "/portfolio", name: "Portfolio", active: false },
-  { _id: 4, href: "/contact", name: "Contact & Resume", active: false },
+  { _id: 1, href: "#", name: "Home", active: false },
+  { _id: 2, href: "#about", name: "About", active: false },
+  { _id: 3, href: "#projects", name: "Projects", active: false },
+  { _id: 4, href: "#skills", name: "skills", active: false },
+  { _id: 5, href: "#contact", name: "Contact Me", active: false },
 ];
 
-export default navListData;
+export { navListData };
+
+const mediaData = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/david-vidal-dev/",
+  },
+  { name: "GitHub", href: "https://github.com/DavidVida1" },
+];
+
+export { mediaData };
 
 const skillsData = [
   { name: "Html", length: 90 },

@@ -3,17 +3,27 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import "../animation.css";
 
-const HeaderButton = ({ isActive, setIsActive }) => {
+const HeaderButton = ({ isActive, setIsActive, setIsShowing }) => {
   return (
     <ButtonHeader
       onClick={() => {
-        setIsActive(!isActive);
+        console.log(isActive);
+        if (isActive) {
+          setIsActive(false);
+          /*setTimeout(() => {
+            setIsShowing(false);
+            console.log(isActive, "alllo");
+          }, 1000);*/
+        } else {
+          setIsShowing(true);
+          setIsActive(true);
+        }
       }}
     >
       <motion.div
         className="slider"
         animate={{ left: isActive ? "-100%" : "0" }}
-        transition={{ duration: 0.5, ease: [0.76, 0, 0.024, 1] }}
+        transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
       >
         <div className="el">
           <div className="slideText">
@@ -33,17 +43,18 @@ const HeaderButton = ({ isActive, setIsActive }) => {
 };
 
 const ButtonHeader = styled.aside`
+  position: absolute;
   display: flex;
   flex-direction: row;
-  position: relative;
   height: 100px;
   width: 40px;
   border-radius: 5px;
-  margin-top: 100px;
   overflow: hidden;
   cursor: pointer;
   animation: slideFromRightAnimation 0.5s forwards;
-  box-shadow: 0 0 5px white;
+  /*box-shadow: 0 0 5px white;*/
+  top: 0;
+  right: 0;
 
   & .slider {
     position: relative;
@@ -62,7 +73,7 @@ const ButtonHeader = styled.aside`
       &:nth-of-type(2) {
         position: absolute;
         left: 100%;
-        background-color: var(--color-black);
+        background-color: rgba(0, 0, 0, 0);
         color: var(--color-white);
       }
 
@@ -95,7 +106,7 @@ const ButtonHeader = styled.aside`
           transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
           &:nth-of-type(2) {
             position: absolute;
-            transform: translateX(-175%);
+            transform: translateX(-180%);
             opacity: 1;
           }
         }

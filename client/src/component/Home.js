@@ -11,14 +11,12 @@ const Home = () => {
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     /*text goes down if scroll down and opacity is reduced until 0 is reached */
-    const newPosition = latest * 3000;
-    setPositionY(newPosition);
-    /**/
+    /*const newPosition = latest * 3000;
+    setPositionY(newPosition);*/
 
     /*opacity reaches 0 when scrolling down*/
-    const newOpacity = 1 - latest * 8;
+    const newOpacity = 1 - latest * 7;
     setScrollOpacity(Math.max(0, Math.min(1, newOpacity)));
-    /**/
   });
 
   const textVariants = {
@@ -30,18 +28,34 @@ const Home = () => {
       x: 0,
       opacity: scrollOpacity,
       transition: {
-        duration: 1,
-        staggerchildren: 0.1,
+        duration: 0,
+        staggerchildren: 0.8,
       },
-      translateY: positionY,
+      /*translateY: positionY,*/
+    },
+  };
+
+  const cardVariants = {
+    animate: {
+      x: 0,
+      opacity: scrollOpacity,
+      transition: {
+        duration: 0,
+        staggerchildren: 0.8,
+      },
+      /*translateY: positionY,*/
     },
   };
 
   return (
-    <HomeContainer>
-      <div className="cardContainer">
+    <HomeContainer id="">
+      <motion.div
+        animate="animate"
+        variants={cardVariants}
+        className="cardContainer"
+      >
         <Card />
-      </div>
+      </motion.div>
 
       <motion.article
         animate="animate"
@@ -70,8 +84,11 @@ const HomeContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100dvh;
   overflow-x: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 0;
 
   & .cardContainer {
     animation: float 3s ease-in-out infinite;

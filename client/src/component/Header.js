@@ -7,10 +7,12 @@ import styled from "styled-components";
 import FramerIcone from "../FramerMotion/FramerIcone";
 import "../animation.css";
 import HeaderButton from "./HeaderButton";
+import Nav from "./Nav";
 
 const Header = () => {
   const [slideAnimation, setSlideAnimation] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const [isShowing, setIsShowing] = useState(false);
 
   /*animation made with css and not FramerMotion to pratice*/
   useEffect(() => {
@@ -25,7 +27,15 @@ const Header = () => {
     <HeaderContainer>
       {slideAnimation && (
         <div className="wrapper">
-          <HeaderButton isActive={isActive} setIsActive={setIsActive} />
+          <div className="menu">
+            {isShowing && <Nav isActive={isActive} />}
+
+            <HeaderButton
+              isActive={isActive}
+              setIsShowing={setIsShowing}
+              setIsActive={setIsActive}
+            />
+          </div>
 
           <aside className="media">
             <ul>
@@ -45,14 +55,14 @@ const Header = () => {
                 </li>
               </FramerIcone>
 
-              <FramerIcone>
+              {/*  <FramerIcone>
                 <li>
                   <a href="#contact">
                     <FaEnvelope className="mail" />
                     <FaEnvelopeOpen className="mailOpen" />
                   </a>
                 </li>
-              </FramerIcone>
+              </FramerIcone>*/}
             </ul>
           </aside>
         </div>
@@ -66,13 +76,13 @@ const HeaderContainer = styled.header`
   height: 100vh;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
-  z-index: 1;
+  z-index: 100;
 
   & .wrapper {
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     color: var(--color-black);
     font-size: 1.5rem;
@@ -80,6 +90,12 @@ const HeaderContainer = styled.header`
     right: 0;
     bottom: 0px;
     margin: 50px 0px;
+
+    & .menu {
+      position: absolute;
+      top: 100px;
+      right: 28px;
+    }
 
     & .media {
       display: flex;
@@ -144,7 +160,7 @@ const HeaderContainer = styled.header`
         }
       }
 
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 1430px) {
         display: none;
       }
     }

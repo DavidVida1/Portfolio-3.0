@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import Header from "./component/Header";
@@ -38,9 +38,9 @@ function App() {
           <About />
           <Projects />
 
-          <AppContainer>
+          <SkillsContainer>
             <Skills />
-          </AppContainer>
+          </SkillsContainer>
 
           <Contact />
           <Footer />
@@ -52,9 +52,11 @@ function App() {
 
 export default App;
 
-const AppContainer = styled.section`
-  position: relative;
-  margin: 0px 100px;
+const SkillsContainer = styled.section`
+  position: sticky;
+  top: 0;
+  margin: 0 100px;
+  z-index: 1;
 
   @media screen and (max-width: 700px) {
     margin: 0px 50px;

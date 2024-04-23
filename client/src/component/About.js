@@ -35,14 +35,16 @@ const About = () => {
         <aside className="aboutInfo">
           <img src={portrait} alt="portrait" />
 
-          <p>
-            From microbiologist to web developer, I've shifted my focus from the
-            microscopic world to the digital one, leveraging my analytical
-            mindset and passion for crafting visually captivating user-friendly
-            web experiences. My career shift represents a fusion of scientific
-            rigor and digital creativity in the ever-evolving landscape of web
-            development.
-          </p>
+          <div className="text">
+            <h2>Hi,i'm David 👋</h2>
+            <p>
+              <span>Welcome to my corner of the web</span>, With every line of
+              code, I strive to weave digital experiences that not only function
+              flawlessly but also dazzle. <span>Motivated by passion </span>and
+              fueled by a love for coding, I leverage a creative mindset to
+              breathe life into digital visions with each keystroke.
+            </p>
+          </div>
         </aside>
       </div>
     </AboutContainer>
@@ -54,42 +56,40 @@ export default About;
 const AboutContainer = styled.section`
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   color: var(--color-white);
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
+  z-index: 10;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.99) 75%,
+    rgba(0, 0, 0, 0.95) 80%,
+    rgba(0, 0, 0, 0.9) 85%,
+    rgba(0, 0, 0, 0.85) 90%,
+    rgba(0, 0, 0, 0.8) 95%,
+    rgba(0, 0, 0, 0.77) 100%
+  );
+
   box-shadow: rgba(0, 0, 0, 0.25) 0px -15px 15px,
     rgba(0, 0, 0, 0.12) 0px -15px 15px, rgba(0, 0, 0, 0.12) 0px -15px 15px,
     rgba(0, 0, 0, 0.17) 0px -15px 15px, rgba(0, 0, 0, 0.09) 0px -15px 15px;
-  overflow-x: hidden;
+  border-radius: 20px 20px 0px 0px;
 
-  & h3 {
-    margin: 0px 100px;
-  }
   & .aboutWrappper {
-    height: 100%;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 1) 25%,
-      rgba(0, 0, 0, 1) 50%,
-      rgba(0, 0, 0, 0.6) 80%,
-      rgba(0, 0, 0, 0.4) 90%,
-      rgba(0, 0, 0, 0.2) 95%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    border-radius: 10px;
+    & h3 {
+      margin: 0px 100px;
+    }
 
     & .aboutInfo {
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin: 0px 30px;
+      margin: 0 5%;
 
       & img {
         border-radius: 10px;
-        width: 20%;
+        width: 25%;
         height: auto;
-
         -webkit-mask-image: linear-gradient(#000, transparent);
         mask-image: linear-gradient(#000, transparent);
 
@@ -100,20 +100,32 @@ const AboutContainer = styled.section`
           min-width: 40%;
         }
       }
-
-      & p {
+      & .text {
         padding: 0 50px;
-        font-weight: 100;
-        /* font-size: clamp(3rem, 3.2vw, 4rem);*/
-        font-size: clamp(3rem, 4.2vw, 5rem);
 
-        @media screen and (max-width: 1400px) {
-          font-size: clamp(2rem, 4.3vw, 4rem);
+        & h2 {
+          display: block;
+          margin: 25px 0;
         }
 
-        /* @media screen and (max-width: 1200px) {
-          font-size: clamp(2.6rem, 3.7vw, 4rem);
-        }*/
+        & p {
+          font-weight: 300;
+          /* font-size: clamp(3rem, 3.2vw, 4rem);*/
+          font-size: clamp(3rem, 4.2vw, 4rem);
+          z-index: 10;
+
+          @media screen and (max-width: 1400px) {
+            font-size: clamp(2rem, 4.3vw, 4rem);
+          }
+
+          & span:nth-child(1) {
+            color: rgba(100, 220, 255, 1);
+          }
+
+          & span:nth-child(2) {
+            color: rgba(255, 200, 61, 1);
+          }
+        }
       }
 
       @media screen and (max-width: 700px) {
