@@ -94,14 +94,14 @@ const projects = [
     projectImg: carV2,
     link: "https://davidvida1.github.io/carV2/",
   },
-  {
+  /* {
     category: "WEB",
     skills: ["React", "JavaScript", "CSS", "HTML", "Framer-Motion"],
     name: "This Portfolio",
     description: "This Portfolio was made by Me!!",
     projectImg: portfolio3,
     link: "https://davidvida1.github.io/",
-  },
+  },*/
 ];
 export { projects };
 

@@ -28,8 +28,8 @@ const Home = () => {
       x: 0,
       opacity: scrollOpacity,
       transition: {
-        duration: 0,
-        staggerchildren: 0.8,
+        duration: 1,
+        staggerchildren: 0.1,
       },
       /*translateY: positionY,*/
     },

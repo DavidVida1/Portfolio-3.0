@@ -74,7 +74,7 @@ export default Projects;
 const ProjectContainer = styled.section`
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   padding-top: 30px;
   color: var(--color-white);
 
@@ -102,12 +102,8 @@ const ProjectContainer = styled.section`
 
   & .projectWrapper {
     display: grid;
-
-    /*
-    grid-template-columns: 20% 5% 5% 20%;
-    grid-template-rows: repeat(3, 200px);*/
-    grid-template-columns: 29.5% 29.5% 29.5%;
-    grid-template-rows: 45% 40%;
+    grid-template-columns: 25.5% 25.5% 25.5%;
+    grid-template-rows: 85%;
     grid-gap: 30px;
 
     justify-content: center;
@@ -131,13 +127,6 @@ const ProjectContainer = styled.section`
       grid-row: 3 / 5;*/
       grid-column: 3;
       grid-row: 1 / 1;
-    }
-
-    & :nth-child(4) {
-      /* grid-column: 1 / 5;
-      grid-row: 5/6;*/
-      grid-column: 1/4;
-      grid-row: 2/3;
     }
 
     & a {
