@@ -15,7 +15,7 @@ const Home = () => {
     setPositionY(newPosition);*/
 
     /*opacity reaches 0 when scrolling down*/
-    const newOpacity = 1 - latest * 7;
+    const newOpacity = 1 - latest * 8;
     setScrollOpacity(Math.max(0, Math.min(1, newOpacity)));
   });
 
@@ -28,8 +28,7 @@ const Home = () => {
       x: 0,
       opacity: scrollOpacity,
       transition: {
-        duration: 1,
-        staggerchildren: 0.1,
+        duration: 0.5,
       },
       /*translateY: positionY,*/
     },
@@ -41,7 +40,6 @@ const Home = () => {
       opacity: scrollOpacity,
       transition: {
         duration: 0,
-        staggerchildren: 0.8,
       },
       /*translateY: positionY,*/
     },
