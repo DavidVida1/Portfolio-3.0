@@ -20,7 +20,7 @@ const textVariants = {
 
 const Projects = () => {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
+  const isInView = useInView(ref, { margin: "-1px" });
 
   return (
     <ProjectContainer id="projects">
@@ -95,14 +95,9 @@ const ProjectContainer = styled.section`
   border-radius: 0px 0px 20px 20px;
   z-index: 10;
 
-  & h3 {
-    position: relative;
-    margin: 0px 100px;
-  }
-
   & .projectWrapper {
     display: grid;
-    grid-template-columns: 25.5% 25.5% 25.5%;
+    grid-template-columns: 28.5% 28.5% 28.5%;
     grid-template-rows: 85%;
     grid-gap: 30px;
 

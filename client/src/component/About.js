@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const About = () => {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
+  const isInView = useInView(ref, { margin: "-1px" });
 
   const textVariants = {
     initial: {
@@ -76,10 +76,6 @@ const AboutContainer = styled.section`
   border-radius: 20px 20px 0px 0px;
 
   & .aboutWrappper {
-    & h3 {
-      margin: 0px 100px;
-    }
-
     & .aboutInfo {
       display: flex;
       flex-direction: row;
@@ -93,10 +89,10 @@ const AboutContainer = styled.section`
         -webkit-mask-image: linear-gradient(#000, transparent);
         mask-image: linear-gradient(#000, transparent);
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1280px) {
           min-width: 25%;
         }
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 768px) {
           min-width: 40%;
         }
       }
@@ -110,7 +106,6 @@ const AboutContainer = styled.section`
 
         & p {
           font-weight: 300;
-          /* font-size: clamp(3rem, 3.2vw, 4rem);*/
           font-size: clamp(3rem, 4.2vw, 4rem);
           z-index: 10;
 
@@ -128,11 +123,11 @@ const AboutContainer = styled.section`
         }
       }
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 760px) {
         margin: 0;
       }
 
-      @media screen and (max-width: 1400px) {
+      @media screen and (max-width: 1280px) {
         flex-direction: column;
       }
     }

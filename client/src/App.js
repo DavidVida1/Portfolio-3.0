@@ -37,11 +37,7 @@ function App() {
 
           <About />
           <Projects />
-
-          <SkillsContainer>
-            <Skills />
-          </SkillsContainer>
-
+          <Skills />
           <Contact />
           <Footer />
         </>
@@ -51,17 +47,3 @@ function App() {
 }
 
 export default App;
-
-const SkillsContainer = styled.section`
-  position: sticky;
-  top: 0;
-  margin: 0 100px;
-  z-index: 1;
-
-  @media screen and (max-width: 700px) {
-    margin: 0px 50px;
-  }
-  @media screen and (max-width: 600px) {
-    margin: 10px;
-  }
-`;

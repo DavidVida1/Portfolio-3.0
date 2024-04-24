@@ -68,10 +68,6 @@ const CardWrapper = styled.section`
     border: 1px solid rgba(203, 155, 81, 0.2);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
-    @media screen and (max-width: 600px) {
-      width: 320px;
-      height: 200px;
-    }
     & article {
       display: flex;
       flex-direction: column;

@@ -19,7 +19,7 @@ const textVariants = {
 
 const Contact = () => {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
+  const isInView = useInView(ref, { margin: "-1px" });
   return (
     <ContactContainer id="contact">
       <article className="contactText">
@@ -118,7 +118,6 @@ const ContactContainer = styled.section`
     justify-content: center;
     align-items: center;
     & h3 {
-      font-size: clamp(2rem, 6vw, 12rem);
       text-transform: uppercase;
       letter-spacing: 3px;
       padding: 30px 20px;

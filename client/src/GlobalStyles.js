@@ -191,19 +191,25 @@ input {
 
   & h2 {     
     display: inline;
-    font-size: clamp(4rem, 4.2vw, 6rem);
+    font-size: clamp(6rem, 4.2vw, 7rem);
     text-shadow: 0 0 5px white;
     font-weight: 700;
   }
 
   & h3 {
-    padding: 50px 20px;
+    position: relative;
+    margin: 0px 100px;
+    padding: 50px 0px;
     text-transform: uppercase;
     font-size: 3rem;
     font-size: clamp(3rem, 4.2vw, 5rem);
     font-weight: 700;
     text-shadow: 0 0 5px white;
     filter: drop-shadow(0 0 1px var(--color-white));
+    
+    @media (max-width: 760px) {
+      margin: 0px 50px;
+}
   }
 
 
@@ -227,17 +233,76 @@ input {
       backdrop-filter: blur(11.1px);
       -webkit-backdrop-filter: blur(11.1px);
       box-shadow: 0px 0px 10px black;
-    }
+  }
+
+  & .container {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/*3xl*/
+@media (max-width: 1920px) {
+  .container {
+    max-width: 1920px;
+
+  }
+}
+
+  /* 2xl */
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+
+  }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+}
 
 `;
 
-/*
-Breakpoints
-Min-width: 320px (smaller phone viewpoints)
-Min-width: 480px (small devices and most phones)
-Min-width: 768px (most tablets)
-Min-width: 992px (smaller desktop viewpoints)
-Min-width: 1200px (large devices and wide screens)
+/*Breakpoints 2
+Min-width: 475px (XS)
+Min-width: 640px (SM)
+Min-width: 768px (md)
+Min-width: 1024px (lg)
+Min-width: 1280px (xl)
+Min-width: 1536px (2xl)
 */
 
 /* useEffect(() => {

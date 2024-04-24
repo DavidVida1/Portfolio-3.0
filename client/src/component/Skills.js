@@ -20,7 +20,7 @@ const textVariants = {
 
 const Skills = () => {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
+  const isInView = useInView(ref, { margin: "-1px" });
 
   return (
     <SkillContainer id="skills">
@@ -60,32 +60,32 @@ const Skills = () => {
 export default Skills;
 
 const SkillContainer = styled.section`
-  position: relative;
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   width: 100%;
   height: 100dvh;
-  font-size: 5rem;
   color: var(--color-white);
   z-index: 10;
 
   & .skillWrapper {
     display: grid;
     grid-template-columns: 60% auto;
-    gap: 30px;
-    height: auto;
+    margin: 0 100px;
 
     & .skillInfo {
       display: flex;
       flex-direction: column;
       row-gap: 50px;
-
-      & p {
-        font-weight: 300;
-        width: 90%;
-        font-size: clamp(3rem, 4.2vw, 5rem);
+      & div {
+        & p {
+          font-weight: 300;
+          width: 90%;
+          font-size: clamp(3rem, 4.2vw, 5rem);
+        }
       }
     }
 
@@ -96,23 +96,23 @@ const SkillContainer = styled.section`
       align-items: center;
       border-radius: 5px;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 640px) {
         grid-template-columns: 50% auto;
       }
 
-      @media screen and (max-width: 1500px) {
+      @media screen and (max-width: 1536px) {
         margin: 50px 0;
       }
     }
 
-    @media screen and (max-width: 1500px) {
+    @media screen and (max-width: 1536px) {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-  }
 
-  @media screen and (max-width: 600px) {
-    margin: 0 10px;
+    @media screen and (max-width: 760px) {
+      margin: 50px;
+    }
   }
 `;

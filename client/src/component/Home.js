@@ -46,7 +46,7 @@ const Home = () => {
   };
 
   return (
-    <HomeContainer id="">
+    <HomeContainer id="" className="container">
       <motion.div
         animate="animate"
         variants={cardVariants}
@@ -65,9 +65,11 @@ const Home = () => {
 
         <div className="text">
           <h2>front-end</h2>
-          <p>
-            Crafting visually captivating experience with code and creativity
-          </p>
+          <div className="subtext">
+            <p>Crafting visually</p>
+            <p>captivating experience</p>
+            <p>with code and creativity</p>
+          </div>
         </div>
 
         <h2>web developer</h2>
@@ -95,6 +97,12 @@ const HomeContainer = styled.section`
   & h2,
   .text p {
     transform: translateX(-30px);
+
+    @media screen and (max-width: 768px) {
+      transform: translateX(0px);
+      font-size: 5.2rem;
+      color: red;
+    }
   }
 
   & .textWrapper {
@@ -112,48 +120,24 @@ const HomeContainer = styled.section`
     & .text {
       display: flex;
       width: 100%;
+      flex-direction: row;
+      align-items: center;
       letter-spacing: 5px;
 
-      & p {
-        font-size: clamp(1.3rem, 1.2vw, 1.7rem);
-        width: 32%;
-        text-shadow: 0 0 5px white;
-        font-weight: 700;
-        @media screen and (max-width: 1150px) {
-          width: 33%;
-        }
-        @media screen and (max-width: 1050px) {
-          width: 35%;
-        }
-        @media screen and (max-width: 910px) {
-          width: 38%;
-        }
-        @media screen and (max-width: 820px) {
-          width: 42%;
-        }
-        @media screen and (max-width: 750px) {
-          width: 50%;
-        }
-        @media screen and (max-width: 620px) {
-          font-size: clamp(1rem, 2vw, 1.7rem);
-        }
-        @media screen and (max-width: 600px) {
+      & .subtext {
+        & p {
           width: 100%;
+          font-size: clamp(1.3rem, 1.2vw, 1.7rem);
+          text-shadow: 0 0 5px white;
+          font-weight: 700;
         }
       }
 
-      @media screen and (max-width: 600px) {
-        flex-direction: column;
-      }
-    }
-
-    @media screen and (max-width: 700px) {
-      bottom: 13%;
-    }
-
-    @media screen and (max-width: 450px) {
-      h2 {
-        font-size: 3.6rem;
+      @media screen and (max-width: 768px) {
+        &.text {
+          flex-direction: column;
+          align-items: flex-start;
+        }
       }
     }
   }
