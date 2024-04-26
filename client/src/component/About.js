@@ -77,11 +77,10 @@ const AboutContainer = styled.section`
   border-radius: 20px 20px 0px 0px;
 
   & .aboutWrappper {
-    height: 100dvh;
+    height: 100%;
     & .aboutInfo {
       display: flex;
       flex-direction: row;
-      justify-content: center;
       align-items: center;
       height: 100%;
       width: 100%;
@@ -94,13 +93,12 @@ const AboutContainer = styled.section`
         mask-image: linear-gradient(#000, transparent);
 
         @media screen and (max-width: 1280px) {
-          min-width: 40%;
-        }
-        @media screen and (max-width: 1024px) {
-          min-width: 40%;
+          min-width: 45%;
+          align-self: start;
         }
         @media screen and (max-width: 768px) {
-          min-width: 35%;
+          align-self: center;
+          min-width: 30%;
         }
       }
 
@@ -113,12 +111,13 @@ const AboutContainer = styled.section`
 
         @media screen and (max-width: 1280px) {
           padding: 0 40px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-self: start;
         }
         @media screen and (max-width: 1024px) {
-          padding: 0 5px;
-        }
-        @media screen and (max-width: 768px) {
-          padding: 0 0px;
+          padding: 0 10px;
         }
 
         & h2 {
@@ -132,7 +131,7 @@ const AboutContainer = styled.section`
         & p {
           height: 100%;
           font-weight: 300;
-          font-size: clamp(3rem, 4.2vw, 4rem);
+          font-size: clamp(3rem, 3.8vw, 3.8rem);
 
           & span:nth-child(1) {
             color: rgba(100, 220, 255, 1);
@@ -143,10 +142,10 @@ const AboutContainer = styled.section`
           }
 
           @media screen and (max-width: 768px) {
-            font-size: 2.8rem;
+            font-size: clamp(3.3rem, 3.8vw, 4rem);
           }
-          @media screen and (max-width: 640px) {
-            min-height: max-content;
+          @media screen and (max-width: 475px) {
+            font-size: clamp(3rem, 3.2vw, 3.3rem);
           }
         }
       }
