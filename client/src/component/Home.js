@@ -46,7 +46,7 @@ const Home = () => {
   };
 
   return (
-    <HomeContainer id="" className="container">
+    <HomeContainer id="">
       <motion.div
         animate="animate"
         variants={cardVariants}
@@ -101,7 +101,6 @@ const HomeContainer = styled.section`
     @media screen and (max-width: 768px) {
       transform: translateX(0px);
       font-size: 5.2rem;
-      color: red;
     }
   }
 
@@ -139,6 +138,17 @@ const HomeContainer = styled.section`
           align-items: flex-start;
         }
       }
+    }
+  }
+  @media (max-width: 475px) {
+    & h2 {
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 475px) {
+    & .textWrapper {
+      display: flex;
+      flex-direction: column;
     }
   }
 `;

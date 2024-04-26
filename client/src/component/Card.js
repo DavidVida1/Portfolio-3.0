@@ -68,6 +68,20 @@ const CardWrapper = styled.section`
     border: 1px solid rgba(203, 155, 81, 0.2);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
+    @media (max-width: 640px) {
+      &.card {
+        width: 350px;
+        height: 225px;
+      }
+    }
+
+    @media (max-width: 475px) {
+      &.card {
+        width: 300px;
+        height: 200px;
+      }
+    }
+
     & article {
       display: flex;
       flex-direction: column;
@@ -125,8 +139,12 @@ const CardWrapper = styled.section`
         background-clip: text;
         text-shadow: 0, 0, 0, rgba(255, 255, 255, 0.18);
 
-        @media screen and (max-width: 600px) {
-          top: 130px;
+        @media (max-width: 640px) {
+          top: 140px;
+        }
+
+        @media (max-width: 475px) {
+          top: 120px;
         }
       }
 
@@ -166,16 +184,12 @@ const CardWrapper = styled.section`
         left: 50%;
         transform: translate(-50%, -325%);
 
-        @media screen and (max-width: 600px) {
-          transform: translate(-50%, -320%);
-        }
-
         .quote {
           font-size: 1.9rem;
           padding: 5px 0px;
           text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 
-          @media screen and (max-width: 600px) {
+          @media screen and (max-width: 640px) {
             font-size: 1.3rem;
           }
         }
@@ -184,6 +198,14 @@ const CardWrapper = styled.section`
 
     & .js-tilt-glare {
       border-radius: 10px;
+    }
+
+    @media (max-width: 1536px) {
+      &.card {
+        position: relative;
+        bottom: 50px;
+        left: 50px;
+      }
     }
   }
 `;

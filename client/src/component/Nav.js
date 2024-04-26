@@ -8,7 +8,7 @@ import NavFooter from "./NavFooter";
 const Nav = ({ isActive }) => {
   const menuVariants = {
     open: {
-      width: 480,
+      width: 350,
       height: 500,
       transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
       top: "-10px",

@@ -23,7 +23,7 @@ const Contact = () => {
   return (
     <ContactContainer id="contact">
       <article className="contactText">
-        <motion.h3
+        <motion.h2
           variants={textVariants}
           initial="initial"
           animate={isInView && "animate"}
@@ -31,7 +31,7 @@ const Contact = () => {
           whileHover={{ color: "white" }}
         >
           Have an awesome idea?
-        </motion.h3>
+        </motion.h2>
 
         <h4>Let's team up and make it come alive with a touch of</h4>
         <h4>Creativity and a lot of technical magic in web development!</h4>
@@ -117,15 +117,25 @@ const ContactContainer = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    & h3 {
+
+    @media (max-width: 640px) {
+      padding-top: 150px;
+    }
+    & h2 {
       text-transform: uppercase;
       letter-spacing: 3px;
       padding: 30px 20px;
+      @media (max-width: 1024px) {
+        font-size: clamp(2rem, 4.2vw, 6rem);
+      }
     }
 
     & h4 {
       align-self: center;
-      font-size: clamp(1rem, 3.6vw, 5rem);
+      font-size: clamp(1rem, 3vw, 5rem);
+      @media (max-width: 640px) {
+        font-size: clamp(1rem, 2.5vw, 3rem);
+      }
     }
   }
   & .wrapper {
@@ -134,7 +144,6 @@ const ContactContainer = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
     border-radius: 10px;
     /*box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;*/
@@ -147,7 +156,11 @@ const ContactContainer = styled.section`
       /*border-radius: 10px;
       border: 1px solid rgba(203, 155, 81, 0.2);
       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;*/
-      width: 50%;
+      width: 70%;
+
+      @media (max-width: 640px) {
+        padding: 0px 50px;
+      }
 
       & label {
         font-size: 2.5rem;

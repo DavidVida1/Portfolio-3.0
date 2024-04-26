@@ -33,7 +33,7 @@ const Projects = () => {
       >
         Projects
       </motion.h3>
-      <section className="projectWrapper">
+      <section className="projectWrapper container">
         {/*selectedCategory est definie a linterieure ddu useEffect et a donc acces a Navportfolio*/}
         {projects.map((project, id) => {
           return (

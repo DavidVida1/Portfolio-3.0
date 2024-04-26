@@ -23,7 +23,7 @@ const About = () => {
   };
   return (
     <AboutContainer id="about">
-      <div className="aboutWrappper">
+      <div className="aboutWrappper container">
         <motion.h3
           variants={textVariants}
           initial="initial"
@@ -32,6 +32,7 @@ const About = () => {
         >
           About Me
         </motion.h3>
+
         <aside className="aboutInfo">
           <img src={portrait} alt="portrait" />
 
@@ -76,11 +77,14 @@ const AboutContainer = styled.section`
   border-radius: 20px 20px 0px 0px;
 
   & .aboutWrappper {
+    height: 100dvh;
     & .aboutInfo {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       align-items: center;
-      margin: 0 5%;
+      height: 100%;
+      width: 100%;
 
       & img {
         border-radius: 10px;
@@ -90,28 +94,45 @@ const AboutContainer = styled.section`
         mask-image: linear-gradient(#000, transparent);
 
         @media screen and (max-width: 1280px) {
-          min-width: 25%;
-        }
-        @media screen and (max-width: 768px) {
           min-width: 40%;
         }
+        @media screen and (max-width: 1024px) {
+          min-width: 40%;
+        }
+        @media screen and (max-width: 768px) {
+          min-width: 35%;
+        }
       }
+
       & .text {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         padding: 0 50px;
+
+        @media screen and (max-width: 1280px) {
+          padding: 0 40px;
+        }
+        @media screen and (max-width: 1024px) {
+          padding: 0 5px;
+        }
+        @media screen and (max-width: 768px) {
+          padding: 0 0px;
+        }
 
         & h2 {
           display: block;
           margin: 25px 0;
+          @media screen and (max-width: 1024px) {
+            font-size: 5rem;
+          }
         }
 
         & p {
+          height: 100%;
           font-weight: 300;
           font-size: clamp(3rem, 4.2vw, 4rem);
-          z-index: 10;
-
-          @media screen and (max-width: 1400px) {
-            font-size: clamp(2rem, 4.3vw, 4rem);
-          }
 
           & span:nth-child(1) {
             color: rgba(100, 220, 255, 1);
@@ -120,14 +141,21 @@ const AboutContainer = styled.section`
           & span:nth-child(2) {
             color: rgba(255, 200, 61, 1);
           }
+
+          @media screen and (max-width: 768px) {
+            font-size: 2.8rem;
+          }
+          @media screen and (max-width: 640px) {
+            min-height: max-content;
+          }
         }
       }
 
-      @media screen and (max-width: 760px) {
+      @media screen and (max-width: 1024px) {
         margin: 0;
       }
 
-      @media screen and (max-width: 1280px) {
+      @media screen and (max-width: 768px) {
         flex-direction: column;
       }
     }

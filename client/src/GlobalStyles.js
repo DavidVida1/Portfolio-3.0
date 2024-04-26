@@ -221,7 +221,7 @@ input {
   & .skillText, & a.nav{        
     font-weight: 700;
     text-shadow: 0 0 5px white;
-    font-size: clamp(2.7rem, 3.5vw, 4rem);
+    font-size: clamp(2.5rem, 3.5vw, 4rem);
       
     &:hover:not(&.skillText) {
         filter: drop-shadow(0 0 3px var(--color-white));
@@ -235,12 +235,14 @@ input {
       box-shadow: 0px 0px 10px black;
   }
 
+
   & .container {
+
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  /*padding-left: 0.5rem;
+  padding-right: 0.5rem;*/
 }
 
 /*3xl*/
@@ -263,6 +265,7 @@ input {
 @media (max-width: 1280px) {
   .container {
     max-width: 1024px;
+
   }
 }
 
@@ -283,7 +286,7 @@ input {
 /* sm */
 @media (max-width: 640px) {
   .container {
-    max-width: 475px;
+   max-width: 475px;
   }
 }
 
