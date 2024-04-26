@@ -89,13 +89,22 @@ const AboutContainer = styled.section`
         border-radius: 10px;
         width: 25%;
         height: auto;
+        align-self: start;
         -webkit-mask-image: linear-gradient(#000, transparent);
         mask-image: linear-gradient(#000, transparent);
 
-        @media screen and (max-width: 1280px) {
-          min-width: 45%;
-          align-self: start;
+        @media (max-width: 1536px) {
+          min-width: 35%;
         }
+
+        @media screen and (max-width: 1280px) {
+          min-width: 40%;
+        }
+
+        @media screen and (max-width: 1024px) {
+          min-width: 40%;
+        }
+
         @media screen and (max-width: 768px) {
           align-self: center;
           min-width: 30%;
@@ -107,13 +116,15 @@ const AboutContainer = styled.section`
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 0 50px;
+        align-self: start;
+        padding: 0 100px;
+
+        @media (max-width: 1536px) {
+          align-self: start;
+        }
 
         @media screen and (max-width: 1280px) {
-          padding: 0 40px;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
+          padding: 0 20px;
           align-self: start;
         }
         @media screen and (max-width: 1024px) {
@@ -131,7 +142,7 @@ const AboutContainer = styled.section`
         & p {
           height: 100%;
           font-weight: 300;
-          font-size: clamp(3rem, 3.8vw, 3.8rem);
+          font-size: clamp(3rem, 3.8vw, 4.5rem);
 
           & span:nth-child(1) {
             color: rgba(100, 220, 255, 1);
