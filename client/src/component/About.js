@@ -71,6 +71,10 @@ const AboutContainer = styled.section`
     rgba(0, 0, 0, 0.77) 100%
   );
 
+  @media (max-height: 640px) {
+    height: 100%;
+  }
+
   box-shadow: rgba(0, 0, 0, 0.25) 0px -15px 15px,
     rgba(0, 0, 0, 0.12) 0px -15px 15px, rgba(0, 0, 0, 0.12) 0px -15px 15px,
     rgba(0, 0, 0, 0.17) 0px -15px 15px, rgba(0, 0, 0, 0.09) 0px -15px 15px;

@@ -68,6 +68,10 @@ const SkillContainer = styled.section`
   height: 100dvh;
   color: var(--color-white);
 
+  @media (max-height: 640px) {
+    height: 100%;
+  }
+
   &.container {
     @media (max-width: 640px) {
       max-width: 100%;

@@ -195,8 +195,9 @@ input {
     text-shadow: 0 0 5px white;
     font-weight: 700;
 
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-device-height: 390px)  and (max-device-height: 640px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
      font-size: 3rem;
+     color: red;
     }
   }
 
@@ -322,11 +323,10 @@ Min-width: 1280px (xl)
 Min-width: 1536px (2xl)
 
 
-@media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-device-height: 390px) and (max-device-height: 475px) and (orientation: landscape) {
+top: 100px;
 }
 
-@media only screen and (min-device-width: 480px) and (max-device-width: 640px) and (orientation: landscape) {
-}
 */
 
 /* useEffect(() => {

@@ -111,7 +111,7 @@ const ContactContainer = styled.section`
     rgba(0, 0, 0, 1) 100%
   );
 
-  @media (max-height: 768px) {
+  @media (max-height: 640px) {
     height: 100%;
   }
 
