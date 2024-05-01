@@ -68,16 +68,9 @@ const CardWrapper = styled.section`
     border: 1px solid rgba(203, 155, 81, 0.2);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-device-height: 390px) and (max-device-height: 600px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 600px) and (orientation: landscape) {
       width: 275px;
       height: 175px;
-    }
-
-    @media (max-width: 640px) {
-      &.card {
-        width: 350px;
-        height: 225px;
-      }
     }
 
     @media (max-width: 475px) {
@@ -144,12 +137,8 @@ const CardWrapper = styled.section`
         background-clip: text;
         text-shadow: 0, 0, 0, rgba(255, 255, 255, 0.18);
 
-        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-device-height: 390px) and (max-device-height: 600px) and (orientation: landscape) {
+        @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 600px) and (orientation: landscape) {
           top: 100px;
-        }
-
-        @media (max-width: 640px) {
-          top: 140px;
         }
 
         @media (max-width: 475px) {
@@ -162,7 +151,7 @@ const CardWrapper = styled.section`
         font-size: clamp(2rem, 3.5vw, 2.2rem);
         text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 
-        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-device-height: 390px) and (max-device-height: 600px) and (orientation: landscape) {
+        @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 600px) and (orientation: landscape) {
           font-size: 1.5rem;
         }
       }
@@ -170,7 +159,7 @@ const CardWrapper = styled.section`
         font-family: "Times New Roman", Times, serif;
         font-size: clamp(1.5rem, 3vw, 2rem);
         text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-device-height: 390px) and (max-device-height: 600px) and (orientation: landscape) {
+        @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 600px) and (orientation: landscape) {
           font-size: 1.3rem;
         }
       }
@@ -205,15 +194,18 @@ const CardWrapper = styled.section`
           padding: 5px 0px;
           text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 
-          @media screen and (max-width: 640px) {
-            font-size: 1.3rem;
-          }
-
-          @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-device-height: 390px) and (max-device-height: 600px) and (orientation: landscape) {
+          @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 600px) and (orientation: landscape) {
             font-size: 1.1rem;
           }
+          @media (max-width: 475px) {
+            &.quote {
+              top: 130px;
+              font-size: 1.3rem;
+            }
+          }
         }
-        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-device-height: 390px) and (max-device-height: 600px) and (orientation: landscape) {
+
+        @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 600px) and (orientation: landscape) {
           top: 65%;
           left: 50%;
         }
@@ -232,7 +224,7 @@ const CardWrapper = styled.section`
       }
     }
 
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-device-height: 390px) and (max-device-height: 475px) and (orientation: landscape) {
+    @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 475px) and (orientation: landscape) {
       &.card {
         position: relative;
         bottom: -30px;

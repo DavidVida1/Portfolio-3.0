@@ -39,7 +39,6 @@ function App() {
           <Projects />
           <Skills />
           <Contact />
-          <Footer />
         </>
       )}
     </BrowserRouter>

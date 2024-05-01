@@ -195,9 +195,8 @@ input {
     text-shadow: 0 0 5px white;
     font-weight: 700;
 
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 640px) {
      font-size: 3rem;
-     color: red;
     }
   }
 

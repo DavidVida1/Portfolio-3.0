@@ -5,7 +5,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 const textVariants = {
   initial: {
-    x: -500,
+    x: -300,
     opacity: 0,
   },
   animate: {
@@ -20,7 +20,7 @@ const textVariants = {
 
 const Skills = () => {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-1px" });
+  const isInView = useInView(ref, { margin: "-10px" });
 
   return (
     <SkillContainer id="skills" className="container">

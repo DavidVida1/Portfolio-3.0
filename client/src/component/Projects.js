@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const textVariants = {
   initial: {
-    x: -500,
+    x: -300,
     opacity: 0,
   },
   animate: {
@@ -20,7 +20,7 @@ const textVariants = {
 
 const Projects = () => {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-1px" });
+  const isInView = useInView(ref, { margin: "-10px" });
 
   return (
     <ProjectContainer id="projects">

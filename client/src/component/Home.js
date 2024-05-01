@@ -102,6 +102,10 @@ const HomeContainer = styled.section`
       transform: translateX(0px);
       font-size: 5.2rem;
     }
+
+    @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 640px) {
+      transform: translateX(0px);
+    }
   }
 
   & .textWrapper {
@@ -145,6 +149,7 @@ const HomeContainer = styled.section`
       font-size: 4rem;
     }
   }
+
   @media (max-width: 475px) {
     & .textWrapper {
       display: flex;

@@ -44,14 +44,9 @@ const FooterContainer = styled.footer`
   height: 100%;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 10px 50px;
 
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
-
+  background-color: var(--color-black);
   color: var(--color-white);
   font-size: clamp(1rem, 4.2vw, 2rem);
 
@@ -73,9 +68,5 @@ const FooterContainer = styled.footer`
     font-weight: 700;
     background: transparent;
     border: none;
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 10px;
   }
 `;

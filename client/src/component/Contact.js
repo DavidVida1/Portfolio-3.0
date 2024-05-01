@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import { motion, useInView } from "framer-motion";
+import Footer from "./Footer.js";
 
 const textVariants = {
   initial: {
-    x: -500,
+    x: -300,
     opacity: 0,
   },
   animate: {
@@ -19,75 +20,78 @@ const textVariants = {
 
 const Contact = () => {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-1px" });
+  const isInView = useInView(ref, { margin: "-10px" });
   return (
-    <ContactContainer id="contact">
-      <article className="contactText">
-        <motion.h2
-          variants={textVariants}
-          initial="initial"
-          animate={isInView && "animate"}
-          ref={ref}
-          whileHover={{ color: "white" }}
-        >
-          Have an awesome idea?
-        </motion.h2>
+    <>
+      <ContactContainer id="contact">
+        <article className="contactText">
+          <motion.h2
+            variants={textVariants}
+            initial="initial"
+            animate={isInView && "animate"}
+            ref={ref}
+            whileHover={{ color: "white" }}
+          >
+            Have an awesome idea?
+          </motion.h2>
 
-        <h4>Let's team up and make it come alive with a touch of</h4>
-        <h4>Creativity and a lot of technical magic in web development!</h4>
-      </article>
+          <h4>Let's team up and make it come alive with a touch of</h4>
+          <h4>Creativity and a lot of technical magic in web development!</h4>
+        </article>
 
-      <div className="wrapper">
-        <form
-          className="formContainer"
-          action="https://formspree.io/f/xjvqzolw"
-          method="POST"
-        >
-          <div className="nameWrapper">
-            <div className="nameContainer">
-              <label htmlFor="fname"></label>
-              <input
-                type="text"
-                id="fname"
-                name="firstname"
-                placeholder="Your name.."
-              />
+        <div className="wrapper">
+          <form
+            className="formContainer"
+            action="https://formspree.io/f/xjvqzolw"
+            method="POST"
+          >
+            <div className="nameWrapper">
+              <div className="nameContainer">
+                <label htmlFor="fname"></label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="Your name.."
+                />
+              </div>
+
+              <div className="nameContainer">
+                <label htmlFor="lname"></label>
+                <input
+                  type="text"
+                  id="lname"
+                  name="lastname"
+                  placeholder="Your last name.."
+                />
+              </div>
             </div>
 
-            <div className="nameContainer">
-              <label htmlFor="lname"></label>
-              <input
-                type="text"
-                id="lname"
-                name="lastname"
-                placeholder="Your last name.."
-              />
-            </div>
-          </div>
+            <label htmlFor="email"></label>
+            <input
+              type="email"
+              placeholder="Enter Email..."
+              name="email"
+              id="email"
+              required
+            ></input>
 
-          <label htmlFor="email"></label>
-          <input
-            type="email"
-            placeholder="Enter Email..."
-            name="email"
-            id="email"
-            required
-          ></input>
+            <label htmlFor="subject"></label>
+            <textarea
+              id="message"
+              type="message"
+              name="message"
+              placeholder="Share your idea..."
+              className="message"
+              rows="5"
+            ></textarea>
 
-          <label htmlFor="subject"></label>
-          <textarea
-            id="message"
-            type="message"
-            name="message"
-            placeholder="Share your idea..."
-            className="message"
-            rows="5"
-          ></textarea>
-
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
-    </ContactContainer>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </ContactContainer>
+      <Footer />
+    </>
   );
 };
 
@@ -96,9 +100,8 @@ export default Contact;
 const ContactContainer = styled.section`
   position: relative;
   width: 100%;
-  height: 98dvh;
+  height: 100%;
   color: var(--color-white);
-  z-index: 10;
 
   background: linear-gradient(
     180deg,
@@ -110,7 +113,11 @@ const ContactContainer = styled.section`
     rgba(0, 0, 0, 1) 20%,
     rgba(0, 0, 0, 1) 100%
   );
-
+  @media (max-width: 640px) {
+    .container {
+      max-width: 640px;
+    }
+  }
   @media (max-height: 640px) {
     height: 100%;
   }
@@ -149,12 +156,14 @@ const ContactContainer = styled.section`
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    padding-bottom: 50px;
     /*box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;*/
     margin: 0 100px;
 
     & .formContainer {
       display: flex;
+
       flex-direction: column;
       padding: 30px 50px;
       /*border-radius: 10px;
@@ -239,7 +248,7 @@ const ContactContainer = styled.section`
       margin: 0px 50px;
     }
     @media screen and (max-width: 640px) {
-      margin: 10px;
+      margin: 0px;
     }
   }
 `;
