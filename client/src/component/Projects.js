@@ -248,7 +248,7 @@ const ProjectContainer = styled.section`
         }
       }
     }
-    @media screen and (max-width: 1700px) {
+    @media screen and (max-width: 1280px) {
       display: flex;
       flex-direction: column;
       align-items: center;

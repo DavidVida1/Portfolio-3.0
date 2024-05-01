@@ -64,11 +64,9 @@ const SkillContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   width: 100%;
   height: 100dvh;
   color: var(--color-white);
-  z-index: 10;
 
   &.container {
     @media (max-width: 640px) {

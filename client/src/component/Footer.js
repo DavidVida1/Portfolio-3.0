@@ -41,7 +41,7 @@ export default Footer;
 const FooterContainer = styled.footer`
   position: relative;
   display: flex;
-  height: 2.4vh;
+  height: 100%;
   flex-direction: row;
   justify-content: space-between;
   padding: 0 50px;
@@ -51,6 +51,7 @@ const FooterContainer = styled.footer`
     rgba(0, 0, 0, 0.95) 0%,
     rgba(0, 0, 0, 1) 100%
   );
+
   color: var(--color-white);
   font-size: clamp(1rem, 4.2vw, 2rem);
 
@@ -74,7 +75,7 @@ const FooterContainer = styled.footer`
     border: none;
   }
 
-  @media screen and (max-width: 475px) {
+  @media screen and (max-width: 768px) {
     padding: 10px;
   }
 `;

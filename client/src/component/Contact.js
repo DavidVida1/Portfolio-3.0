@@ -111,6 +111,10 @@ const ContactContainer = styled.section`
     rgba(0, 0, 0, 1) 100%
   );
 
+  @media (max-height: 768px) {
+    height: 100%;
+  }
+
   & .contactText {
     padding-top: 50px;
     display: flex;
