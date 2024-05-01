@@ -212,7 +212,7 @@ const ContactContainer = styled.section`
           background-color: #45a049;
         }
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 768px) {
           align-self: center;
         }
       }
@@ -225,16 +225,16 @@ const ContactContainer = styled.section`
           width: 100%;
         }
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 768px) {
           flex-direction: column;
         }
       }
     }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 768px) {
       margin: 0px 50px;
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 640px) {
       margin: 10px;
     }
   }

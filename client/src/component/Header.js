@@ -160,7 +160,7 @@ const HeaderContainer = styled.header`
         }
       }
 
-      @media screen and (max-width: 1430px) {
+      @media screen and (max-width: 1024px) {
         display: none;
       }
     }

@@ -60,7 +60,7 @@ const NavFooterContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-    margin-top: 100px;
+    margin-top: 25px;
 
     a {
       color: var(--color-white);

@@ -7,7 +7,7 @@ const navListData = [
   { _id: 1, href: "#", name: "Home", active: false },
   { _id: 2, href: "#about", name: "About", active: false },
   { _id: 3, href: "#projects", name: "Projects", active: false },
-  { _id: 4, href: "#skills", name: "skills", active: false },
+  { _id: 4, href: "#skills", name: "Skills", active: false },
   { _id: 5, href: "#contact", name: "Contact Me", active: false },
 ];
 

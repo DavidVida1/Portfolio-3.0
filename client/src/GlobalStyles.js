@@ -194,6 +194,10 @@ input {
     font-size: clamp(6rem, 4.2vw, 7rem);
     text-shadow: 0 0 5px white;
     font-weight: 700;
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  font-size: 3rem;
+    }
   }
 
   & h3 {
@@ -218,12 +222,22 @@ input {
     font-size: clamp(3rem, 4.2vw, 4rem);
       }
 
-  & .skillText, & a.nav{        
+  & .skillText {        
     font-weight: 700;
     text-shadow: 0 0 5px white;
     font-size: clamp(2.5rem, 3.5vw, 4rem);
       
     &:hover:not(&.skillText) {
+        filter: drop-shadow(0 0 3px var(--color-white));
+      }
+    }
+
+    & a.nav{        
+    font-weight: 700;
+    text-shadow: 0 0 5px white;
+    font-size: clamp(2.5rem, 3.5vw, 3.5rem);
+      
+    &:hover {
         filter: drop-shadow(0 0 3px var(--color-white));
       }
     }
@@ -306,6 +320,19 @@ Min-width: 768px (md)
 Min-width: 1024px (lg)
 Min-width: 1280px (xl)
 Min-width: 1536px (2xl)
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+  .ipad-portrait { color: red; } }
+
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+  .ipad-landscape { color: blue; } }
+
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 640px) 
+                   and (orientation: landscape) {
+
+//enter code here
+}
 */
 
 /* useEffect(() => {

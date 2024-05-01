@@ -9,7 +9,7 @@ const Nav = ({ isActive }) => {
   const menuVariants = {
     open: {
       width: 350,
-      height: 500,
+      height: 330,
       transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
       top: "-10px",
       right: "-10px",
@@ -91,8 +91,8 @@ const NavWrapperMotion = styled(motion.nav)`
       gap: 10px;
       /*  height: calc(100% - 110px);*/
       height: max-content;
-      top: 110px;
-      padding: 0px 40px 50px 40px;
+      top: 25px;
+      padding: 0px 40px 30px 40px;
       box-sizing: border-box;
       & .linkContainer {
         perspective: 120px;

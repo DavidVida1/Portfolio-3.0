@@ -74,7 +74,7 @@ const FooterContainer = styled.footer`
     border: none;
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 475px) {
     padding: 10px;
   }
 `;
