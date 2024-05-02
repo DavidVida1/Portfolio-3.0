@@ -69,13 +69,13 @@ const CardWrapper = styled.section`
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
     @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 600px) and (orientation: landscape) {
-      width: 275px;
+      width: 285px;
       height: 175px;
     }
 
     @media (max-width: 475px) {
       &.card {
-        width: 300px;
+        width: 325px;
         height: 200px;
       }
     }

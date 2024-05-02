@@ -98,7 +98,7 @@ const AboutContainer = styled.section`
         -webkit-mask-image: linear-gradient(#000, transparent);
         mask-image: linear-gradient(#000, transparent);
 
-        @media (max-width: 1536px) {
+        @media screen and (max-width: 1536px) {
           min-width: 35%;
         }
 
