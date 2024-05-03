@@ -1,4 +1,3 @@
-/*import CardWrapper from "react-vanilla-tilt";*/
 import React, { useState } from "react";
 import Tilt from "./Tilt.js";
 import styled from "styled-components";
@@ -14,17 +13,22 @@ const Card = () => {
     setIsFlipped(!isFlipped);
   };
 
+  /*Glare effect on the card*/
   const glare = {
     glare: true,
     "max-glare": 0.5,
     max: 30,
     "glare-prerender": false,
   };
+  /*End of Glare effect on the card*/
 
+  /*Mouvement Effect when hover on the Card*/
   const mouvement = {
     scale: 1.1,
     speed: 1000,
   };
+  /*End of Mouvement Effect when hover on the Card*/
+
   return (
     <CardWrapper>
       <Tilt options={mouvement} className="mouvement">
@@ -85,7 +89,7 @@ const CardWrapper = styled.section`
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      font-family: "Times New Roman", Times, serif;
+      font-family: var(--font-times);
       width: 100%;
 
       & img {
@@ -135,7 +139,6 @@ const CardWrapper = styled.section`
 
         -webkit-background-clip: text;
         background-clip: text;
-        text-shadow: 0, 0, 0, rgba(255, 255, 255, 0.18);
 
         @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 600px) and (orientation: landscape) {
           top: 100px;
@@ -147,18 +150,18 @@ const CardWrapper = styled.section`
       }
 
       & .name {
-        font-family: "Times New Roman", Times, serif;
         font-size: clamp(2rem, 3.5vw, 2.2rem);
-        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        text-shadow: 2px 2px 3px var(--color-black);
 
         @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 600px) and (orientation: landscape) {
           font-size: 1.5rem;
         }
       }
+
       & .job {
-        font-family: "Times New Roman", Times, serif;
         font-size: clamp(1.5rem, 3vw, 2rem);
-        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        text-shadow: 2px 2px 3px var(--color-black);
+
         @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 600px) and (orientation: landscape) {
           font-size: 1.3rem;
         }
@@ -169,6 +172,7 @@ const CardWrapper = styled.section`
       -webkit-animation: flip-in-hor-bottom 1s
         cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
       animation: flip-in-hor-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
       & .back {
         display: none;
       }
@@ -178,6 +182,7 @@ const CardWrapper = styled.section`
       -webkit-animation: flip-in-hor-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
         both;
       animation: flip-in-hor-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
       & .front {
         display: none;
       }
@@ -192,7 +197,7 @@ const CardWrapper = styled.section`
         .quote {
           font-size: 1.9rem;
           padding: 5px 0px;
-          text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+          text-shadow: 2px 2px 3px var(--color-black);
 
           @media only screen and (min-device-width: 640px) and (max-device-width: 1024px) and (min-device-height: 0px) and (max-device-height: 600px) and (orientation: landscape) {
             font-size: 1.1rem;

@@ -7,6 +7,7 @@ const About = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "10px" });
 
+  /*InView  animation on the h3 name of the section*/
   const textVariants = {
     initial: {
       x: -300,
@@ -21,6 +22,7 @@ const About = () => {
       },
     },
   };
+  /*End of InView  animation on the h3 name of the section*/
 
   return (
     <AboutContainer id="about">
@@ -60,8 +62,7 @@ const AboutContainer = styled.section`
   width: 100%;
   height: 100dvh;
   color: var(--color-white);
-  border-radius: 20px 20px 0px 0px;
-  z-index: 10;
+  border-radius: var(--radius-about);
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.99) 75%,
@@ -71,15 +72,14 @@ const AboutContainer = styled.section`
     rgba(0, 0, 0, 0.8) 95%,
     rgba(0, 0, 0, 0.77) 100%
   );
+  box-shadow: rgba(0, 0, 0, 0.25) 0px -15px 15px,
+    rgba(0, 0, 0, 0.12) 0px -15px 15px, rgba(0, 0, 0, 0.12) 0px -15px 15px,
+    rgba(0, 0, 0, 0.17) 0px -15px 15px, rgba(0, 0, 0, 0.09) 0px -15px 15px;
+  z-index: 10;
 
   @media (max-height: 640px) {
     height: 100%;
   }
-
-  box-shadow: rgba(0, 0, 0, 0.25) 0px -15px 15px,
-    rgba(0, 0, 0, 0.12) 0px -15px 15px, rgba(0, 0, 0, 0.12) 0px -15px 15px,
-    rgba(0, 0, 0, 0.17) 0px -15px 15px, rgba(0, 0, 0, 0.09) 0px -15px 15px;
-  border-radius: 20px 20px 0px 0px;
 
   & .aboutWrappper {
     height: 100%;
@@ -91,7 +91,7 @@ const AboutContainer = styled.section`
       width: 100%;
 
       & img {
-        border-radius: 10px;
+        border-radius: var(--radius10);
         width: 25%;
         height: auto;
         align-self: start;
@@ -150,11 +150,11 @@ const AboutContainer = styled.section`
           font-size: clamp(3rem, 3.8vw, 4.5rem);
 
           & span:nth-child(1) {
-            color: rgba(100, 220, 255, 1);
+            color: var(--color-blue);
           }
 
           & span:nth-child(2) {
-            color: rgba(255, 200, 61, 1);
+            color: var(--color-yellow);
           }
 
           @media screen and (max-width: 768px) {

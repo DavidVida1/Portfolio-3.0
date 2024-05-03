@@ -3,24 +3,27 @@ import styled from "styled-components";
 import { motion, useInView } from "framer-motion";
 import Footer from "./Footer.js";
 
-const textVariants = {
-  initial: {
-    x: -300,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerchildren: 0.1,
-    },
-  },
-};
-
 const Contact = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-10px" });
+
+  /*InView  animation on the h3 name of the section*/
+  const textVariants = {
+    initial: {
+      x: -300,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerchildren: 0.1,
+      },
+    },
+  };
+  /*End of InView  animation on the h3 name of the section*/
+
   return (
     <>
       <ContactContainer id="contact">
@@ -136,6 +139,7 @@ const ContactContainer = styled.section`
       text-transform: uppercase;
       letter-spacing: 3px;
       padding: 30px 20px;
+
       @media (max-width: 1024px) {
         font-size: clamp(2rem, 4.2vw, 6rem);
       }
@@ -144,11 +148,13 @@ const ContactContainer = styled.section`
     & h4 {
       align-self: center;
       font-size: clamp(1rem, 3vw, 5rem);
+
       @media (max-width: 640px) {
         font-size: clamp(1rem, 2.5vw, 3rem);
       }
     }
   }
+
   & .wrapper {
     position: relative;
     display: flex;
@@ -157,18 +163,12 @@ const ContactContainer = styled.section`
     align-items: center;
     border-radius: 10px;
     padding-bottom: 50px;
-    /*box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;*/
     margin: 0 100px;
 
     & .formContainer {
       display: flex;
-
       flex-direction: column;
       padding: 30px 50px;
-      /*border-radius: 10px;
-      border: 1px solid rgba(203, 155, 81, 0.2);
-      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;*/
       width: 70%;
 
       @media (max-width: 640px) {
@@ -208,7 +208,7 @@ const ContactContainer = styled.section`
       & input::placeholder,
       textarea::placeholder {
         color: var(--color-white);
-        font-size: 1.5rem;
+        font-size: var(--size-placeholder);
       }
 
       & input[type="submit"] {
