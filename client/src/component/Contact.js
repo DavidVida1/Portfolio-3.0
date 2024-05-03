@@ -33,7 +33,6 @@ const Contact = () => {
             initial="initial"
             animate={isInView && "animate"}
             ref={ref}
-            whileHover={{ color: "white" }}
           >
             Have an awesome idea?
           </motion.h2>

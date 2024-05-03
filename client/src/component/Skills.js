@@ -29,7 +29,6 @@ const Skills = () => {
         initial="initial"
         animate={isInView && "animate"}
         ref={ref}
-        whileHover={{ color: "white" }}
       >
         Skills
       </motion.h3>

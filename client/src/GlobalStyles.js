@@ -101,6 +101,7 @@ video {
 --color-black: rgba(0,0,0,1);
 --color-blue: rgba(100, 220, 255, 1);
 --color-yellow:rgba(255, 200, 61, 1);
+--color-border-card:rgba(203, 155, 81, 0.2);
 
 --font-times:"Times New Roman", Times, serif;
 --size-placeholder:1.5rem;
@@ -108,6 +109,13 @@ video {
 --radius10:10px;
 --radius-about:20px 20px 0px 0px;
 
+--shadow-card:0px 22px 70px 4px rgba(0, 0, 0, 0.56);
+--shadow-about: rgba(0, 0, 0, 0.25) 0px -15px 15px,
+ rgba(0, 0, 0, 0.12) 0px -15px 15px, rgba(0, 0, 0, 0.12) 0px -15px 15px, 
+ rgba(0, 0, 0, 0.17) 0px -15px 15px, rgba(0, 0, 0, 0.09) 0px -15px 15px;
+
+--bg-about:linear-gradient(180deg, rgba(0, 0, 0, 0.99) 75%, rgba(0, 0, 0, 0.95) 80%,
+ rgba(0, 0, 0, 0.9) 85%, rgba(0, 0, 0, 0.85) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0.77) 100%);
 
 /*blue center top bottom*/ 
 --color1: 199, 82, 42;
@@ -218,7 +226,7 @@ table {
   font-size: clamp(3rem, 4.2vw, 5rem);
   font-weight: 700;
   text-shadow: 0 0 5px white;
-  filter: drop-shadow(0 0 1px var(--color-white));
+  filter: drop-shadow(0 0 10px var(--color-white));
     
   @media (max-width: 768px) {
       margin: 0px 50px;

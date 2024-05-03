@@ -29,7 +29,6 @@ const Projects = () => {
         initial="initial"
         animate={isInView && "animate"}
         ref={ref}
-        whileHover={{ color: "white" }}
       >
         Projects
       </motion.h3>

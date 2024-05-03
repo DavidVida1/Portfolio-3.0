@@ -63,18 +63,8 @@ const AboutContainer = styled.section`
   height: 100dvh;
   color: var(--color-white);
   border-radius: var(--radius-about);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.99) 75%,
-    rgba(0, 0, 0, 0.95) 80%,
-    rgba(0, 0, 0, 0.9) 85%,
-    rgba(0, 0, 0, 0.85) 90%,
-    rgba(0, 0, 0, 0.8) 95%,
-    rgba(0, 0, 0, 0.77) 100%
-  );
-  box-shadow: rgba(0, 0, 0, 0.25) 0px -15px 15px,
-    rgba(0, 0, 0, 0.12) 0px -15px 15px, rgba(0, 0, 0, 0.12) 0px -15px 15px,
-    rgba(0, 0, 0, 0.17) 0px -15px 15px, rgba(0, 0, 0, 0.09) 0px -15px 15px;
+  background: var(--bg-about);
+  box-shadow: var(--shadow-about);
   z-index: 10;
 
   @media (max-height: 640px) {
