@@ -2,24 +2,11 @@ import { FaArrowUp } from "react-icons/fa";
 import styled from "styled-components";
 
 const Footer = () => {
-  /* const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsVisible(scrollTop > 100);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-*/
+  /*Scroll to the Top button*/
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Adds smooth scrolling
+      behavior: "smooth",
     });
   };
 

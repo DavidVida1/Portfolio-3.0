@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
-import { FaEnvelopeOpen } from "react-icons/fa";
 import styled from "styled-components";
 import FramerIcone from "../FramerMotion/FramerIcone";
 import "../animation.css";
@@ -54,15 +52,6 @@ const Header = () => {
                   </a>
                 </li>
               </FramerIcone>
-
-              {/*  <FramerIcone>
-                <li>
-                  <a href="#contact">
-                    <FaEnvelope className="mail" />
-                    <FaEnvelopeOpen className="mailOpen" />
-                  </a>
-                </li>
-              </FramerIcone>*/}
             </ul>
           </aside>
         </div>
@@ -115,13 +104,8 @@ const HeaderContainer = styled.header`
           transition: 0.3s;
 
           & .link,
-          .git,
-          .mail {
+          .git {
             color: var(--color-white);
-          }
-
-          & .mailOpen {
-            display: none;
           }
 
           &:hover {
@@ -129,32 +113,11 @@ const HeaderContainer = styled.header`
 
             & .link {
               border-radius: 4px;
-              box-shadow: 0px 0px 5px rgba(100, 220, 255, 1);
-              border-radius: 4px;
-              box-shadow: 0px 0px 5px white;
+              box-shadow: 0px 0px 5px var(--color-white);
             }
             & .git {
               border-radius: 15px;
-              box-shadow: 0px 0px 5px white;
-            }
-
-            & .mailOpen {
-              display: none;
-
-              color: var(--color-white);
-            }
-            & .mail {
-              color: inherit;
-              color: var(--color-white);
-            }
-
-            & .mail {
-              display: none;
-            }
-
-            & .mailOpen {
-              display: block;
-              color: var(--color-white);
+              box-shadow: 0px 0px 5px var(--color-white);
             }
           }
         }

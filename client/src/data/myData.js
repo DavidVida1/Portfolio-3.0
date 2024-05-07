@@ -60,13 +60,13 @@ export { navPortfolio };
 
 const projects = [
   {
-    category: "SCHOOL",
+    category: [/*"school",*/ "Being Fixed"],
     skills: ["React", "JavaScript", "CSS", "HTML"],
     name: "E-commerce School Project",
     description:
       "E-Commerce app for wearable tech (Group Project), I was part of the FrontEnd Team",
     projectImg: allStar,
-    link: "https://cb-group-project-client.vercel.app/",
+    /*link: "https://cb-group-project-client.vercel.app/",*/
   },
   /* {
     category: "SCHOOL",
@@ -86,13 +86,13 @@ const projects = [
     link: "https://davidvida1.github.io/Lounge/",
   },
   {
-    category: "UI/UX",
+    category: [/*"UI/UX",*/ "Being Fixed"],
     skills: ["React", "JavaScript", "CSS", "HTML", "NodeJs", "MongoDB"],
     name: "Car Project-2 ",
     description:
       "Set-up car meetings with a new design FrontEnd, Login function incoming ",
     projectImg: carV2,
-    link: "https://davidvida1.github.io/carV2/",
+    /* link: "https://davidvida1.github.io/carV2/",*/
   },
   /* {
     category: "WEB",
