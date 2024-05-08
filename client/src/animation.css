@@ -183,3 +183,21 @@
 }
 
 /*HEADER ANIMATION*/
+
+/*LOADING ANIMATION*/
+@keyframes backgroundAnimation {
+    0% {
+        background: rgba(25, 33, 46, 1);
+    }
+
+    100% {
+        background: rgba(25, 33, 46, 0.5);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px -15px 15px inset,
+            rgba(0, 0, 0, 0.12) 0px -15px 15px inset,
+            rgba(0, 0, 0, 0.12) 0px -15px 15px inset,
+            rgba(0, 0, 0, 0.17) 0px -15px 15px inset,
+            rgba(0, 0, 0, 0.09) 0px -15px 15px inset;
+    }
+}
+
+/*LOADING ANIMATION*/

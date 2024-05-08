@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import RingLoader from "react-spinners/RingLoader";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion } from "framer-motion";
+import "../animation.css";
 
 const Loading = () => {
+  /*Animation of the loading Ringloader*/
   const animationJob = {
     initial: {
       opacity: 0,
@@ -15,6 +17,9 @@ const Loading = () => {
       },
     },
   };
+
+  /*End of Animation of the loading Ringloader*/
+
   return (
     <LoadingContainer>
       <div className="section_wrapper">
@@ -56,23 +61,8 @@ const LoadingContainer = styled.section`
       height: 100%;
       font-weight: 500;
       color: var(--color-white);
-      text-shadow: 0px 0px 5px white;
+      text-shadow: 0px 0px 5px var(--color-white);
       filter: drop-shadow(0 0 3px var(--color-white));
-    }
-  }
-
-  @keyframes backgroundAnimation {
-    0% {
-      background: rgba(25, 33, 46, 1);
-    }
-
-    100% {
-      background: rgba(25, 33, 46, 0.5);
-      box-shadow: rgba(0, 0, 0, 0.25) 0px -15px 15px inset,
-        rgba(0, 0, 0, 0.12) 0px -15px 15px inset,
-        rgba(0, 0, 0, 0.12) 0px -15px 15px inset,
-        rgba(0, 0, 0, 0.17) 0px -15px 15px inset,
-        rgba(0, 0, 0, 0.09) 0px -15px 15px inset;
     }
   }
 `;

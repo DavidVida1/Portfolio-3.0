@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import NavFooter from "./NavFooter";
 
 const Nav = ({ isActive }) => {
+  /*onClick MenuVariants animation*/
   const menuVariants = {
     open: {
       width: 350,
@@ -22,7 +23,9 @@ const Nav = ({ isActive }) => {
       transition: { duration: 0.75, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
     },
   };
+  /*End of onClick MenuVariants animation*/
 
+  /*Animation of text in menu*/
   const perspective = {
     initial: {
       opacity: 0,
@@ -32,10 +35,7 @@ const Nav = ({ isActive }) => {
       opacity: 1,
       rotateX: 0,
       transition: {
-        /*duration: 0.55,
-        /*opacity: { duration: 0.35 },*/
         delay: 0.5 + _id * 0.1,
-        /*ease: [0.215, 0.61, 0.355, 1],*/
       },
     }),
     exit: {
@@ -43,6 +43,7 @@ const Nav = ({ isActive }) => {
       transition: { duration: 0.75, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
     },
   };
+  /*End of Animation of text in menu*/
 
   return (
     <NavWrapperMotion
@@ -89,7 +90,6 @@ const NavWrapperMotion = styled(motion.nav)`
       flex-direction: column;
 
       gap: 10px;
-      /*  height: calc(100% - 110px);*/
       height: max-content;
       top: 25px;
       padding: 0px 40px 30px 40px;
@@ -98,7 +98,7 @@ const NavWrapperMotion = styled(motion.nav)`
         perspective: 120px;
         perspective-origin: left;
         & .nav {
-          color: white;
+          color: var(--color-white);
         }
       }
     }

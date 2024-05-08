@@ -19,6 +19,7 @@ const Home = () => {
     setScrollOpacity(Math.max(0, Math.min(1, newOpacity)));
   });
 
+  /*Slide animaton from left to right*/
   const textVariants = {
     initial: {
       x: -500,
@@ -33,7 +34,9 @@ const Home = () => {
       /*translateY: positionY,*/
     },
   };
+  /*End of Slide animaton from left to right*/
 
+  /*scroll opacity goes down when scroll down*/
   const cardVariants = {
     animate: {
       x: 0,
@@ -44,6 +47,8 @@ const Home = () => {
       /*translateY: positionY,*/
     },
   };
+
+  /*End of scroll opacity goes down when scroll down*/
 
   return (
     <HomeContainer id="">
@@ -131,7 +136,7 @@ const HomeContainer = styled.section`
         & p {
           width: 100%;
           font-size: clamp(1.3rem, 1.2vw, 1.7rem);
-          text-shadow: 0 0 5px white;
+          text-shadow: 0 0 5px var(--color-white);
           font-weight: 700;
         }
       }

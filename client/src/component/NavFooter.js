@@ -1,9 +1,10 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { mediaData } from "../data/myData";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const NavFooter = ({ isActive }) => {
+  /*Nav footer animation in menu*/
   const slideIn = {
     initial: {
       opacity: 0,
@@ -25,6 +26,7 @@ const NavFooter = ({ isActive }) => {
       transition: { duration: 0.5, type: "tween", ease: "easeInOut" },
     },
   };
+  /*End of Nav footer animation in menu*/
 
   return (
     <NavFooterContainer>

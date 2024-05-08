@@ -1,7 +1,6 @@
 import carV2 from "../assets/carV2.jpg";
 import allStar from "../assets/allStar2.jpg";
 import lounge from "../assets/lounge.jpg";
-import portfolio3 from "../assets/portfolio3.PNG";
 
 const navListData = [
   { _id: 1, href: "#", name: "Home", active: false },

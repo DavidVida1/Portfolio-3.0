@@ -10,10 +10,6 @@ const HeaderButton = ({ isActive, setIsActive, setIsShowing }) => {
         console.log(isActive);
         if (isActive) {
           setIsActive(false);
-          /*setTimeout(() => {
-            setIsShowing(false);
-            console.log(isActive, "alllo");
-          }, 1000);*/
         } else {
           setIsShowing(true);
           setIsActive(true);
@@ -52,7 +48,6 @@ const ButtonHeader = styled.aside`
   overflow: hidden;
   cursor: pointer;
   animation: slideFromRightAnimation 0.5s forwards;
-  /*box-shadow: 0 0 5px white;*/
   top: 0;
   right: 0;
 

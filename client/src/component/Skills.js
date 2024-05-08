@@ -1,26 +1,28 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { skillsData } from "../data/myData.js";
 import styled from "styled-components";
-import { motion, useAnimation, useInView } from "framer-motion";
-
-const textVariants = {
-  initial: {
-    x: -300,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerchildren: 0.1,
-    },
-  },
-};
+import { motion, useInView } from "framer-motion";
 
 const Skills = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-10px" });
+
+  /*InView  animation on the h3 name of the section*/
+  const textVariants = {
+    initial: {
+      x: -300,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerchildren: 0.1,
+      },
+    },
+  };
+  /*End of InView  animation on the h3 name of the section*/
 
   return (
     <SkillContainer id="skills" className="container">

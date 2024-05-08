@@ -3,24 +3,26 @@ import { projects } from "./../data/myData";
 import { motion, useInView } from "framer-motion";
 import styled from "styled-components";
 
-const textVariants = {
-  initial: {
-    x: -300,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerchildren: 0.1,
-    },
-  },
-};
-
 const Projects = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-10px" });
+
+  /*InView  animation on the h3 name of the section*/
+  const textVariants = {
+    initial: {
+      x: -300,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerchildren: 0.1,
+      },
+    },
+  };
+  /*End of InView  animation on the h3 name of the section*/
 
   return (
     <ProjectContainer id="projects">
@@ -33,7 +35,6 @@ const Projects = () => {
         Projects
       </motion.h3>
       <section className="projectWrapper container">
-        {/*selectedCategory est definie a linterieure ddu useEffect et a donc acces a Navportfolio*/}
         {projects.map((project, id) => {
           return (
             <a href={project.link} key={id}>
@@ -88,9 +89,7 @@ const ProjectContainer = styled.section`
     rgba(0, 0, 0, 0.77) 100%
   );
 
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 15px,
-    rgba(0, 0, 0, 0.12) 0px 15px 15px, rgba(0, 0, 0, 0.12) 0px 15px 15px,
-    rgba(0, 0, 0, 0.17) 0px 15px 15px, rgba(0, 0, 0, 0.09) 0px 15px 15px;
+  box-shadow: var(--shadow-project);
   border-radius: 0px 0px 20px 20px;
   z-index: 10;
 
@@ -103,22 +102,16 @@ const ProjectContainer = styled.section`
     justify-content: center;
 
     & :first-child {
-      /*grid-column: 1 / 5;
-      grid-row: 1 / 3;*/
       grid-column: 1 / 1;
       grid-row: 1 / 1;
     }
 
     & :nth-child(2) {
-      /*grid-column: 1 / 3;
-      grid-row: 3 / 5;*/
       grid-column: 2;
       grid-row: 1 / 1;
     }
 
     & :nth-child(3) {
-      /*grid-column: 3 / 5;
-      grid-row: 3 / 5;*/
       grid-column: 3;
       grid-row: 1 / 1;
     }
@@ -141,31 +134,6 @@ const ProjectContainer = styled.section`
         width: 100%;
       }
 
-      /* &::after,
-      &::before {
-        content: " ";
-        position: absolute;
-        height: 50px;
-        width: 50px;
-        z-index: 1;
-        transition: all 0.5s ease-in-out;
-        opacity: 0;
-        border: 3px solid white;
-      }
-
-      &::after {
-        top: 15px;
-        left: 15px;
-        border-bottom: 3px solid transparent;
-        border-right: 3px solid transparent;
-      }
-
-      &::before {
-        bottom: 15px;
-        right: 15px;
-        border-top: 3px solid transparent;
-        border-left: 3px solid transparent;
-      }*/
       & .overlay {
         position: absolute;
         display: flex;
