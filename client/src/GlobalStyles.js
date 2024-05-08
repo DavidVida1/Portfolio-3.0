@@ -120,6 +120,10 @@ video {
 --bg-about:linear-gradient(180deg, rgba(0, 0, 0, 0.99) 75%, rgba(0, 0, 0, 0.95) 80%,
  rgba(0, 0, 0, 0.9) 85%, rgba(0, 0, 0, 0.85) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0.77) 100%);
 
+
+
+/*Background colors*/
+
 /*blue center top bottom*/ 
 --color1: 199, 82, 42;
 /*pink center stays circle left*/ 
@@ -133,16 +137,19 @@ video {
 
 --color-interactive: 101,217,254;
 
---letter-size:  clamp(3rem, 9vw, 16rem);
-
 --circle-size: 90%;
 
 --blending: hard-light;
+/*End of Background colors*/
+
+
+--letter-size:  clamp(3rem, 9vw, 16rem);
 font-size:62.5%;
 }
 
 
-#root{/*position:relative*/}
+#root{/*position:relative*/
+}
 
 ::-webkit-scrollbar {
   width: 0rem;
