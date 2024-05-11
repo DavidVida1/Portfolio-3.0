@@ -104,4 +104,4 @@ const projects = [
 ];
 export { projects };
 
-/* how export multiple or put everything in a constant or deconstruct when outside */
+/* how export multiple or put everything in a constant or deconstruct when outside. */
