@@ -19,3 +19,7 @@ In the journey of building Portfolio 3, I gained valuable insights and honed my 
 - Framer Motion Animation: Explored and implemented advanced animations using Framer Motion to create dynamic and interactive user interfaces.
 - Proper Media Queries Setup: Getting better at the art of setting up responsive design layouts using media queries, ensuring optimal viewing experiences across devices of all sizes.
 - FormSpree Integration: Acquired proficiency in integrating FormSpree for seamless contact form functionality, facilitating efficient communication with users.
+
+## 📷Preview
+
+<img src="./client/src/assets/homePortfolioV3.PNG" style="width: 100%;" alt="Home" />
