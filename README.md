@@ -1,6 +1,6 @@
 # 💻Portfolio V3 - https://davidvida1.github.io/
 
-## 📝 Rough Resume
+## 📝 Rough Summary
 
 As a Front-end Web Developer, I specialize in crafting visually appealing and user-friendly interfaces. With a strong foundation in React JS, JavaScript, HTML, and CSS, I bring websites to life with seamless functionality and elegant design. I leverage tools like Framer Motion for captivating animations, enhancing user experience and engagement.
 
