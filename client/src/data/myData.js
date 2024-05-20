@@ -76,13 +76,13 @@ const projects = [
     link: "#",
   },*/
   {
-    category: [/*"UI/UX",*/ "Being Fixed"],
+    category: ["UI/UX"],
     skills: ["React", "JavaScript", "BootStrap", "CSS", "HTML"],
     name: "Lounge Website UI/UX",
     description:
       "Made a figma page than a landing page following a tutorial in order to learn and pratice Figma & BootStrap ",
     projectImg: lounge,
-    /* link: "https://davidvida1.github.io/Lounge/",*/
+    link: "https://davidvida1.github.io/Lounge/",
   },
   {
     category: [/*"UI/UX",*/ "Being Fixed"],
